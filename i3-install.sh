@@ -1,5 +1,5 @@
-pacman --needed --noconfrim -S polybar i3-wm i3-status picom flameshot arandr xorg-xrandr xclip
-paru --needed --noconfrim i3lock-color
-stow i3-conf
+sudo pacman --needed --noconfirm -S polybar i3-gaps picom flameshot arandr xorg-xrandr xclip
+sudo paru --needed --noconfirm -S i3lock-color
+stow -R i3-conf
 echo "Addin permissions to lock screen script"
-chmod +x $HOME/.config/i3lock/lock
+chmod +x $HOME/.local/bin/lock

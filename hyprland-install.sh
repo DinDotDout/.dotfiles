@@ -16,10 +16,10 @@ paruPckgs=(
     "pyprland"
 );
 
-pacman --noconfirm --needed -S pacmanPckgs
-paru --noconfirm --needed -S paruPckgs
+sudo pacman --noconfirm --needed -S pacmanPckgs
+sudo paru --noconfirm --needed -S paruPckgs
 
-stow hyprland-conf
+stow -R hyprland-conf
 
 # add hyprand needed modifications
 # open files to edit manually with instructions
