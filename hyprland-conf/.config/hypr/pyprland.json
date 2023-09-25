@@ -8,6 +8,11 @@
   },
   "scratchpads": {
     "term": {
+      "command": "alacritty --class alacritty-dropterm",
+      "animation": "fromTop",
+      "unfocus": "hide"
+    },
+    "file-explorer": {
       "command": "alacritty --class alacritty-dropterm -e ranger",
       "animation": "fromTop",
       "unfocus": "hide"
