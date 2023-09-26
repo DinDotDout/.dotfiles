@@ -7,6 +7,11 @@
     ]
   },
   "scratchpads": {
+    "telegram": {
+      "command": "telegram",
+      "animation": "fromLeft",
+      "unfocus": "hide"
+    },
     "term": {
       "command": "alacritty --class alacritty-dropterm",
       "animation": "fromTop",
