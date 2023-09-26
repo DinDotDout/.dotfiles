@@ -15,7 +15,7 @@ keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
 
 -- Skip storing into buffer
-keymap("x", "<leader>p", '"_dP')
+keymap("x", "<leader>p", '"_dp')
 keymap("n", "<leader>d", '"_d')
 keymap("x", "<leader>d", '"_d')
 
