@@ -5,9 +5,8 @@ paru --noconfirm --needed -S swww swaylock-effects wlogout pyprland hyprpicker
 stow -R hyprland-conf
 
 confirm() {
-    read -r -p "${1:-Are you sure? [y/N]} " response
     # call with a prompt string or use a default
-    # read -r -p "${1:(yY/nN)} " response
+    read -r -p "${1:(yY/nN)} " response
     case "$response" in
         [yY][eE][sS]|[yY]) 
             true
@@ -17,6 +16,7 @@ confirm() {
             ;;
     esac
 }
+
 isnvidia=$(lspci -k | grep -A 2 -E "nvidia")
 if [ -z "$isnvidia" ]; then
   exit
