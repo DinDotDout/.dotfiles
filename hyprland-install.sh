@@ -17,6 +17,10 @@ confirm() {
             ;;
     esac
 }
+isnvidia=$(lspci -k | grep -A 2 -E "nvidia")
+if [ -z "$isnvidia" ]; then
+  exit
+fi
 
 # add hyprand needed modifications
 # open files to edit manually with instructions
