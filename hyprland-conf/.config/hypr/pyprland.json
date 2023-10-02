@@ -7,24 +7,9 @@
     ]
   },
   "scratchpads": {
-    "telegram": {
-      "command": "telegram",
-      "animation": "fromLeft",
-      "unfocus": "hide"
-    },
-    "term": {
-      "command": "alacritty --class alacritty-dropterm",
-      "animation": "fromTop",
-      "unfocus": "hide"
-    },
     "file-explorer": {
       "command": "alacritty --class alacritty-dropterm -e ranger",
       "animation": "fromTop",
-      "unfocus": "hide"
-    },
-    "firefox": {
-      "command": "firefox",
-      "animation": "left",
       "unfocus": "hide"
     },
     "volume": {
