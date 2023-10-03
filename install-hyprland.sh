@@ -27,7 +27,7 @@ msg="Do you want the command to be coppied to your vim clipboard?"
 # add hyprand needed modifications
 # open files to edit manually with instructions
 echo "Add nvidia_drm.modeset=1 to GRUB_CMDLINE_LINUX_DEFAULT= in /etc/default/grub"
-(confirm "$msg" && sudo vim -c "let @\"='GRUB_CMDLINE_LINUX_DEFAULT=nvidia_drm.modeset=1'" /etc/default/grub) || sudo vim /etc/default/grub
+(confirm "$msg" && sudo vim -c "let @\"='GRUB_CMDLINE_LINUX_DEFAULT=\"nvidia_drm.modeset=1\"'" /etc/default/grub) || sudo vim /etc/default/grub
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "In /etc/mkinitcpio.conf add nvidia nvidia_modeset nvidia_uvm nvidia_drm to your MODULES"
