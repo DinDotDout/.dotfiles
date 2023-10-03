@@ -1,3 +1,5 @@
 .zcompdump
 .zsh_history
 nvim/.config/nvim/lazy-lock.json
+conf-base/.local/share
+!conf-base/.local/share/rofi/themes
