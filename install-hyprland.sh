@@ -2,7 +2,7 @@
 sudo pacman --noconfirm --needed -S hyprland wl-clipboard xdg-desktop-portal-hyprland waybar grim slurp wofi
 paru --noconfirm --needed -S swww swaylock-effects wlogout pyprland hyprpicker
 
-stow -R hyprland-conf
+stow -R conf-hyprland
 
 confirm() {
     # call with a prompt string or use a default
