@@ -45,7 +45,9 @@ install_paru_and_aur_pcks() {
 	paru_packages=(neovim-remote stow
 		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha
 		protonup-qt timeshift zram-generator preload pywal rofi-calc
-		sddm-sugar-candy-git autofirma-bin) # May need java-8-openjdk
+		sddm-sugar-candy-git autofirma-bin vlc
+	) # May need java-8-openjdk
+
 	paru --noconfirm --needed -S "${paru_packages[@]}" || {
 		echo 'Failed to install paru packages.'
 		exit 1
