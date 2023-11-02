@@ -45,7 +45,7 @@ install_paru_and_aur_pcks() {
 	paru_packages=(neovim-remote stow
 		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha
 		protonup-qt timeshift zram-generator preload pywal rofi-calc
-		sddm-sugar-candy-git autofirma-bin vlc
+		sddm-sugar-candy-git autofirma-bin vlc flatpak
 	) # May need java-8-openjdk
 
 	paru --noconfirm --needed -S "${paru_packages[@]}" || {
@@ -53,6 +53,12 @@ install_paru_and_aur_pcks() {
 		exit 1
 	}
 	echo "DONE!"
+}
+
+configure_flatpak_and_add_repos() {
+	flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
+	flatpak install --user flathub com.github.tchx84.Flatseal
+	flatpak install --user flathub com.microsoft.Edge
 }
 
 add_zram() {
@@ -103,6 +109,7 @@ add_window_manager() {
 main() {
 	get_user_input
 	install_paru_and_aur_pcks
+	configure_flatpak_and_add_repos
 	add_zram
 	prepare_dotfiles
 	change_to_zsh_shell
