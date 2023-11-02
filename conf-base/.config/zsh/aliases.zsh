@@ -45,3 +45,5 @@ alias \
   dot="ranger $HOME/.dotfiles/" \
   # conf="lf $HOME/.config/" \
   # dot="lf $HOME/.dotfiles/" \
+
+alias gpt="com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1' &"

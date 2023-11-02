@@ -7,21 +7,38 @@
     ]
   },
   "scratchpads": {
-    "file-explorer": {
-      "command": "alacritty --class alacritty-dropterm -e ranger",
+    "gptbing": {
+      "command": "flatpak run -u com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1'",
       "animation": "fromTop",
+      "lazy": true,
+      "class": "Microsoft-edge"
+    },
+    "drop-term": {
+      "command": "alacritty --class alacritty-dropterm",
+      "animation": "fromBottom",
+      "lazy": true,
       "unfocus": "hide"
+    },
+    "file-explorer": {
+      "command": "alacritty --class alacritty-explorer --command zsh -ic 'rangercd; exec zsh'",
+      "animation": "fromTop",
+      "lazy": true,
+      "unfocus": "hide"
+    },
+    "telegram": {
+      "command": "telegram-desktop",
+      "lazy": true
     },
     "volume": {
       "command": "pavucontrol",
-      "unfocus": "hide",
+      "lazy": true,
       "animation": "fromRight"
     }
   },
   "monitors": {
     "placement": {
-      "BenQ PJ": {
-        "topOf": "eDP-1"
+      "LG ULTRAGEAR": {
+        "topOf": "DP-1"
       }
     },
     "unknown": "wlrlui"

@@ -1,0 +1,2 @@
+killall wlogout
+wlogout

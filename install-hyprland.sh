@@ -1,6 +1,6 @@
 #!/bin/bash
-sudo pacman --noconfirm --needed -S hyprland wl-clipboard xdg-desktop-portal-hyprland waybar grim slurp wofi
-paru --noconfirm --needed -S swww swaylock-effects wlogout pyprland hyprpicker
+sudo pacman --noconfirm --needed -S hyprland wl-clipboard xdg-desktop-portal-hyprland waybar grim slurp wofi cliphist
+paru --noconfirm --needed -S swww swaylock-effects pyprland hyprpicker wlogout wlr-randr
 
 stow -R conf-hyprland
 

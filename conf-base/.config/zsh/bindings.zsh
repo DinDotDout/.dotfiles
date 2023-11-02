@@ -9,6 +9,9 @@ bindkey -M emacs '^[[3;5~' kill-word
 bindkey -M viins '^[[3;5~' kill-word
 bindkey -M vicmd '^[[3;5~' kill-word
 
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
 # Use lf to switch directories and bind it to ctrl-o
 rangercd () {
     tmp="$(mktemp -uq)"

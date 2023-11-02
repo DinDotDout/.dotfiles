@@ -28,6 +28,10 @@ keymap("i", "<A-l>", "<C-o>l")
 -- keymap("n", "<C-H>", "db", opts)
 keymap("i", "<C-H>", "<C-W>", opts)
 
+-- Replacement commands
+keymap("v", "<leader>r", [[y:let @/ = @"<CR>:%s/<C-r>///gc<left><left><left>]], { desc = "Replace selected text" })
+
+-- keymap("v", "<leader>r", [[y:let @/ = @"<CR>:%sno/<C-r>///gc<left><left><left>]], opts)
 keymap("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace word under cursor" })
 keymap(
   "n",
