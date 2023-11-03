@@ -1,3 +1,6 @@
+import:
+- ~/.cache/wal/colors-alacritty.yml
+
 env:
   # TERM variable
   #
@@ -615,7 +618,7 @@ schemes:
 # *SolarizedLight
 # *SolarizedDark
 # *TomorrowNight
-colors: *tokyo-night-storm
+# colors: *tokyo-night-storm
 
 
 # Visual Bell

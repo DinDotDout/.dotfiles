@@ -25,7 +25,7 @@ if [ "$selected" ]; then
 	# Update wallpaper with pywal
 	# -----------------------------------------------------
 	wal -q -i $selected
-
+	sed -i 's/bar:/footer_bar:/g' ~/.cache/wal/colors-alacritty.yml
 	# -----------------------------------------------------
 	# Get new theme
 	# -----------------------------------------------------
