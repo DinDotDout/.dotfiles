@@ -40,10 +40,9 @@ alias \
 
 alias \
   nv='nvim' \
-  gnvim="nvim --listen $HOME/.cache/nvim/godot.pipe $HOME/projects/continuum_world/game/" \
+  gnv="nvim --listen /tmp/nvimsocket" \
   conf="ranger $HOME/.config/" \
-  dot="ranger $HOME/.dotfiles/" \
-  # conf="lf $HOME/.config/" \
-  # dot="lf $HOME/.dotfiles/" \
+  dotf="ranger $HOME/.dotfiles/" \
 
 alias gpt="com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1' &"
+alias scripts="cd ~/.local/bin/"
