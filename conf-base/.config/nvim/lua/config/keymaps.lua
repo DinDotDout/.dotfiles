@@ -15,9 +15,11 @@ keymap("n", "n", "nzzzv")
 keymap("n", "N", "Nzzzv")
 
 -- Skip storing into buffer
-keymap("x", "<leader>p", '"_dp')
-keymap("n", "<leader>d", '"_d')
-keymap("x", "<leader>d", '"_d')
+keymap("x", "<leader>p", '"_dp', { desc = "Paste line no copying" })
+keymap("v", "<leader>p", '"_dP', { desc = "Paste selection no copying" })
+
+keymap("x", "<leader>d", '"_d', { desc = "Delete no copy" })
+keymap("v", "<leader>d", '"_d', { desc = "Delete no copy" })
 
 -- Allow some small movement in insert mode
 keymap("i", "<A-h>", "<C-o>h")
