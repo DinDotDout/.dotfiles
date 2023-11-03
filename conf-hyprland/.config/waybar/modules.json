@@ -21,7 +21,7 @@
       "default": ""
     },
     "persistent_workspaces": {
-      "*": 5
+      "*": 0
     }
   },
   // Taskbar

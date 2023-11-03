@@ -5,25 +5,23 @@ paru --noconfirm --needed -S swww swaylock-effects pyprland hyprpicker wlogout w
 stow -R conf-hyprland
 
 confirm() {
-    # call with a prompt string or use a default
-    read -r -p "${1:-(yY/nN)} " response
-    case "$response" in
-        [yY][eE][sS]|[yY]|"") 
-            true
-            ;;
-        *)
-            false
-            ;;
-    esac
+	read -r -p "${1:-(yY/nN)} " response
+	case "$response" in
+	[yY][eE][sS] | [yY] | "")
+		true
+		;;
+	*)
+		false
+		;;
+	esac
 }
 
 isnvidia=$(lspci -k | grep -A 2 -E "nvidia")
 if [ -z "$isnvidia" ]; then
-  exit
+	exit
 fi
 
 msg="Do you want the command to be coppied to your vim clipboard?"
-
 # add hyprand needed modifications
 # open files to edit manually with instructions
 echo "Add nvidia_drm.modeset=1 to GRUB_CMDLINE_LINUX_DEFAULT= in /etc/default/grub"
@@ -38,4 +36,3 @@ echo "Add a new line to /etc/modprobe.d/nvidia.conf (make it if it does not exis
 (confirm "$msg" && sudo vim -c "let @\"='options nvidia-drm modeset=1'" /etc/modprobe.d/nvidia.conf) || vim /etc/modprobe.d/nvidia.conf
 echo "Done!"
 echo "You can reboot to see the changes"
-
