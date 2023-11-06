@@ -43,12 +43,12 @@
         "hyprland/workspaces"
     ],
 
-    // Modules Right    
+    // Modules Right
     "modules-right": [
         "custom/youtube",
         "custom/updates",
         "pulseaudio",
-        "bluetooth",
+        //"bluetooth",
         "battery",
         "group/hardware",
         "custom/cliphist",
