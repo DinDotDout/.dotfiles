@@ -46,6 +46,7 @@ install_paru_and_aur_pcks() {
 		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha
 		protonup-qt timeshift zram-generator preload pywal rofi-calc
 		sddm-sugar-candy-git autofirma-bin vlc flatpak libreoffice-still
+		hyprpicker-git
 	) # May need java-8-openjdk
 
 	paru --noconfirm --needed -S "${paru_packages[@]}" || {
