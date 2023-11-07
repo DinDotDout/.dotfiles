@@ -7,11 +7,19 @@
     ]
   },
   "scratchpads": {
+    "firefox-gpt": {
+      "command": "firefox -new-window https://bard.google.com/chat",
+      "animation": "fromTop",
+      "lazy": true,
+      "size": "50% 50%"
+    },
     "gptbing": {
       "command": "flatpak run -u com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1'",
       "animation": "fromTop",
       "lazy": true,
-      "class": "Microsoft-edge"
+      "class": "Microsoft-edge",
+      "margin": 50,
+      "size": "50% 50%"
     },
     "drop-term": {
       "command": "alacritty --class alacritty-dropterm",
