@@ -29,10 +29,10 @@ echo "Add nvidia_drm.modeset=1 to GRUB_CMDLINE_LINUX_DEFAULT= in /etc/default/gr
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 
 echo "In /etc/mkinitcpio.conf add nvidia nvidia_modeset nvidia_uvm nvidia_drm to your MODULES"
-(confirm "$msg" && sudo vim -c "let @\"='nvidia nvidia_modeset nvidia_uvm nvidia_drm'" /etc/mkinitcpio.conf) || vim /etc/mkinitcpio.conf
+(confirm "$msg" && sudo vim -c "let @\"='nvidia nvidia_modeset nvidia_uvm nvidia_drm'" /etc/mkinitcpio.conf) || sudo vim /etc/mkinitcpio.conf
 sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
 
 echo "Add a new line to /etc/modprobe.d/nvidia.conf (make it if it does not exist) and add the line options nvidia-drm modeset=1"
-(confirm "$msg" && sudo vim -c "let @\"='options nvidia-drm modeset=1'" /etc/modprobe.d/nvidia.conf) || vim /etc/modprobe.d/nvidia.conf
+(confirm "$msg" && sudo vim -c "let @\"='options nvidia-drm modeset=1'" /etc/modprobe.d/nvidia.conf) || sudo vim /etc/modprobe.d/nvidia.conf
 echo "Done!"
 echo "You can reboot to see the changes"
