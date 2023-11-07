@@ -56,22 +56,22 @@
   // Cliphist
   "custom/cliphist": {
     "format": "",
-    "on-click": "sleep 0.1 && ~/.config/scripts/cliphist.sh",
-    "on-click-right": "sleep 0.1 && ~/.config/scripts/cliphist.sh d",
-    "on-click-middle": "sleep 0.1 && ~/.config/scripts/cliphist.sh w",
+    "on-click": "sleep 0.1 && ~/.scripts/cliphist.sh",
+    "on-click-right": "sleep 0.1 && ~/.scripts/cliphist.sh d",
+    "on-click-middle": "sleep 0.1 && ~/.scripts/cliphist.sh w",
     "tooltip": false
   },
   // Wallpaper
   "custom/wallpaper": {
     "format": "",
-    "on-click-right": "~/.config/scripts/wallpaper-swww.sh",
-    "on-click": "~/.config/scripts/updatewal-swww.sh",
+    "on-click-right": "~/.scripts/wallpaper-swww.sh",
+    "on-click": "~/.scripts/updatewal-swww.sh",
     "tooltip": false
   },
   // Filemanager Launcher
   "custom/filemanager": {
     "format": "",
-    "on-click": "~/.config/scripts/filemanager.sh",
+    "on-click": "~/.scripts/filemanager.sh",
     "tooltip": false
   },
   // Outlook Launcher
@@ -101,7 +101,7 @@
   // Rofi Calculator
   "custom/calculator": {
     "format": "",
-    "on-click": "~/.config/scripts/calculator.sh",
+    "on-click": "~/.scripts/calculator.sh",
     "tooltip": false
   },
   // Windows VM
@@ -113,7 +113,7 @@
   // Rofi Application Launcher
   "custom/appmenu": {
     "format": "",
-    "on-click": "~/.config/scripts/applauncher.sh",
+    "on-click": "~/.scripts/applauncher.sh",
     "tooltip": false
   },
   // Power Menu
