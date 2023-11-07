@@ -51,7 +51,7 @@
         //"bluetooth",
         "battery",
         "group/hardware",
-        "custom/cliphist",
+        //"custom/cliphist",
         "network",
         "clock",
         "custom/exit"
