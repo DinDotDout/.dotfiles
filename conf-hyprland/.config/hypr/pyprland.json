@@ -8,7 +8,7 @@
   },
   "scratchpads": {
     "firefox-gpt": {
-      "command": "firefox -new-window https://bard.google.com/chat",
+      "command": "firefox https://bard.google.com/chat",
       "animation": "fromTop",
       "lazy": true,
       "size": "50% 50%"
@@ -18,7 +18,7 @@
       "animation": "fromTop",
       "lazy": true,
       "class": "Microsoft-edge",
-      "margin": 50,
+      "margin": 70,
       "size": "50% 50%"
     },
     "drop-term": {
@@ -35,7 +35,8 @@
     },
     "telegram": {
       "command": "telegram-desktop",
-      "lazy": true
+      "lazy": true,
+      "size": "50% 60%"
     },
     "volume": {
       "command": "pavucontrol",
