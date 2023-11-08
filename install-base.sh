@@ -46,8 +46,9 @@ install_paru_and_aur_pcks() {
 		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha
 		protonup-qt timeshift zram-generator preload pywal rofi-calc
 		sddm-sugar-candy-git autofirma-bin vlc flatpak libreoffice-still
-		hyprpicker-git
+		hyprpicker-git python-pywalfox
 	) # May need java-8-openjdk
+	pywalfox install
 
 	paru --noconfirm --needed -S "${paru_packages[@]}" || {
 		echo 'Failed to install paru packages.'
@@ -140,6 +141,11 @@ create_snapshot() {
 		esac
 	done
 
+}
+
+install_mounter() {
+	mkdir ~/.config/ranger/plugins
+	git clone https://github.com/SL-RU/ranger_udisk_menu ~/.config/ranger/plugins/ranger_udisk_menu
 }
 
 main() {

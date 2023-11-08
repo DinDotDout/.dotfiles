@@ -39,6 +39,7 @@ swww img $wallpaper \
 	--transition-duration=0.7 \
 	--transition-pos "$(hyprctl cursorpos)"
 
+pywalfox update
 ~/.config/waybar/launch.sh
 sleep 1
 
