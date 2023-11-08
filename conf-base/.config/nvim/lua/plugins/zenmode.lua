@@ -1,7 +1,11 @@
 return {
   {
     "folke/zen-mode.nvim",
-    opts = {},
+    opts = {
+      window = {
+        width = 180,
+      },
+    },
     keys = { { "<leader>z", ":ZenMode<CR>", desc = "ZenMode" } },
   },
 }
