@@ -29,7 +29,7 @@
     },
     "file-explorer": {
       "command": "alacritty --class alacritty-explorer --command zsh -ic 'rangercd; exec zsh'",
-      "animation": "fromTop",
+      "animation": "fromBottom",
       "lazy": true,
       "unfocus": "hide"
     },

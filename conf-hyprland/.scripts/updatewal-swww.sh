@@ -13,7 +13,6 @@
 # Select random wallpaper and create color scheme
 # -----------------------------------------------------
 wal -q -i ~/wallpaper/
-sed -i 's/bar:/footer_bar:/g' ~/.cache/wal/colors-alacritty.yml
 # -----------------------------------------------------
 # Load current pywal color scheme
 # -----------------------------------------------------
