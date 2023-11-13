@@ -1,4 +1,5 @@
 #!/bin/bash
+#(C) 2023 Joan Dot Saster, GPL v2.0 or later. No warranty.
 sudo pacman --noconfirm --needed -S hyprland wl-clipboard xdg-desktop-portal-hyprland waybar grim slurp wofi cliphist
 paru --noconfirm --needed -S swww swaylock-effects pyprland hyprpicker wlogout wlr-randr
 

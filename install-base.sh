@@ -1,4 +1,6 @@
 #!/bin/bash
+#(C) 2023 Joan Dot Saster, GPL v2.0 or later. No warranty.
+
 clear
 
 welcome_message() {
