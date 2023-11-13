@@ -13,6 +13,7 @@
 # Select random wallpaper and create color scheme
 # -----------------------------------------------------
 wal -q -i ~/wallpaper/
+
 # -----------------------------------------------------
 # Load current pywal color scheme
 # -----------------------------------------------------
@@ -39,6 +40,8 @@ swww img $wallpaper \
 	--transition-pos "$(hyprctl cursorpos)"
 
 pywalfox update
+walogram
+
 ~/.config/waybar/launch.sh
 sleep 1
 

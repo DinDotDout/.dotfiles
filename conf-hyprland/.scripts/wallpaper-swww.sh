@@ -48,6 +48,8 @@ if [ "$selected" ]; then
 		--transition-pos "$(hyprctl cursorpos)"
 
 	pywalfox update
+	walogram
+
 	~/.config/waybar/launch.sh
 	sleep 1
 
