@@ -39,8 +39,8 @@ get_user_input() {
 
 install_paru_and_aur_pcks() {
 	echo "Installing paru"
-	git clone https://aur.archlinux.org/paru-git.git
-	(cd paru-git && makepkg -si)
+	git clone https://aur.archlinux.org/paru-bin.git
+	(cd paru-bin && makepkg -sic)
 	echo "DONE!"
 
 	echo "Installing Paru pckgs!"
