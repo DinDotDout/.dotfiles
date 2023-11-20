@@ -32,10 +32,8 @@
     // Modules Left
     "modules-left": [
         "custom/appmenu",
-        //"custom/wallpaper",
         "wlr/taskbar",
         "hyprland/window"
-        //"group/quicklinks"
     ],
 
     // Modules Center
@@ -45,13 +43,9 @@
 
     // Modules Right
     "modules-right": [
-        "custom/youtube",
-        "custom/updates",
         "pulseaudio",
-        //"bluetooth",
         "battery",
         "group/hardware",
-        //"custom/cliphist",
         "network",
         "clock",
         "custom/exit"
