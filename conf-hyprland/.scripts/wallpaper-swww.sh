@@ -15,7 +15,7 @@ done
 
 # If no --wallpaper flag, use the current method to select wallpaper
 if [ -z "$selected" ]; then
-	selected=$(find -L ~/wallpaper -type f | grep -E "\.jpg$|\.png$" | rofi -dmenu -config ~/.config/rofi/config-wallpaper.rasi -p "Wallpapers")
+	selected=$(find -L ~/wallpaper -type f | grep -E "\.jpg$|\.jpeg$|\.png$" | rofi -dmenu -config ~/.config/rofi/config-wallpaper.rasi -p "Wallpapers")
 fi
 
 if [ "$selected" ]; then
