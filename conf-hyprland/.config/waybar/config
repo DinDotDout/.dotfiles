@@ -43,6 +43,7 @@
 
     // Modules Right
     "modules-right": [
+        "tray",
         "pulseaudio",
         "battery",
         "group/hardware",

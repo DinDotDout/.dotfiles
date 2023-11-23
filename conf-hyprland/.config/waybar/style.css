@@ -368,7 +368,16 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #tray {
-    background-color: #2980b9;
+    background: #FFFFFF;
+    margin: 3px 15px 3px 0px;
+    padding:0px;
+    /*padding: 2px 3px 1px 3px;*/
+    border-radius: 15px;
+    font-weight: normal;
+    font-style: normal;
+    opacity:0.8;
+    border: 3px solid #FFFFFF;
+
 }
 
 #tray > .passive {
