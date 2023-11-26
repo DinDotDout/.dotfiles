@@ -48,7 +48,7 @@ install_paru_and_aur_pcks() {
 		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha
 		protonup-qt timeshift zram-generator preload pywal rofi-calc
 		sddm-sugar-candy-git autofirma-bin vlc flatpak libreoffice-still
-		hyprpicker-git pywal-16-colors python-pywalfox walogram noto-fonts-emoji
+		hyprpicker-git pywal-16-colors python-pywalfox colorz walogram noto-fonts-emoji
 	) # May need java-8-openjdk
 	pywalfox install
 
