@@ -42,7 +42,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.7
+  opacity: 0.85
 
   # Window decorations
   #
@@ -64,7 +64,7 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  #startup_mode: Windowed
+  # startup_mode: Windowed
 
   # Window title
   title: Alacritty
@@ -117,7 +117,6 @@ font:
     # family: CodeNewRoman Nerd Font
     family: RobotoMono Nerd Font
     # family: Hack
-    # family: Hack
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
@@ -135,8 +134,8 @@ font:
     # value specified for the normal font.
     # family: Source Code Pro
     # family: CodeNewRoman Nerd Font
-    # family: RobotoMono Nerd Font
-    family: Hack
+    family: RobotoMono Nerd Font
+    # family: Hack
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
@@ -154,8 +153,8 @@ font:
     # value specified for the normal font.
     # family: Source Code Pro
     # family: CodeNewRoman Nerd Font
-    # family: RobotoMono Nerd Font
-    family: Hack
+    family: RobotoMono Nerd Font
+    # family: Hack
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
@@ -173,8 +172,8 @@ font:
     # value specified for the normal font.
     # family: Source Code Pro
     # family: CodeNewRoman Nerd Font
-    # family: RobotoMono Nerd Font
-    family: Hack
+    family: RobotoMono Nerd Font
+    # family: Hack
     # family: JetBrains Mono
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
@@ -185,7 +184,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 10.0
+  size: 10.5
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
