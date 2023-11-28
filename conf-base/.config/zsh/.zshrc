@@ -28,5 +28,5 @@ cat ~/.cache/wal/sequences
 # -----------------------------------------------------
 # PFETCH
 # -----------------------------------------------------
-echo ""
-pfetch
+# echo ""
+pokemon-colorscripts --no-title -n axew

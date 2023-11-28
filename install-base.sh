@@ -50,7 +50,7 @@ install_paru_and_aur_pcks() {
 	paru_packages=(neovim-remote stow
 		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha nodejs
 		protonup-qt timeshift zram-generator preload pywal rofi-calc
-		sddm-sugar-candy-git autofirma-bin vlc flatpak libreoffice-still
+		sddm-sugar-candy-git autofirma-bin vlc flatpak libreoffice-still pokemon-colorscripts-git
 		hyprpicker-git pywal-16-colors python-pywalfox colorz walogram noto-fonts-emoji
 	) # May need java-8-openjdk
 	pywalfox install
