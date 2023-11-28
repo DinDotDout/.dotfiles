@@ -8,13 +8,13 @@
   },
   "scratchpads": {
     "firefox-gpt": {
-      "command": "firefox https://bard.google.com/chat",
+      "command": "chromium --app=https://bard.google.com/chat",
       "animation": "fromTop",
       "lazy": true,
       "size": "50% 50%"
     },
     "gptbing": {
-      "command": "flatpak run -u com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1'",
+      "command": "flatpak run com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1'",
       "animation": "fromTop",
       "lazy": true,
       "class": "Microsoft-edge",
@@ -36,7 +36,8 @@
     "telegram": {
       "command": "telegram-desktop",
       "lazy": true,
-      "size": "50% 60%"
+      "size": "50% 60%",
+      "class": "Microsoft-edge"
     },
     "volume": {
       "command": "pavucontrol",
