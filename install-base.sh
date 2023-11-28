@@ -2,7 +2,6 @@
 #(C) 2023 Joan Dot Saster, GPL v2.0 or later. No warranty.
 
 clear
-
 welcome_message() {
 	clear
 	echo "  ____        _   ____        _    __ _ _           "
@@ -37,6 +36,10 @@ get_user_input() {
 	done
 }
 
+add_tty_login() {
+	sudo cp resources/login_issue /etc/issue
+}
+
 install_paru_and_aur_pcks() {
 	echo "Installing paru"
 	git clone https://aur.archlinux.org/paru-bin.git
@@ -45,7 +48,7 @@ install_paru_and_aur_pcks() {
 
 	echo "Installing Paru pckgs!"
 	paru_packages=(neovim-remote stow
-		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha
+		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha nodejs
 		protonup-qt timeshift zram-generator preload pywal rofi-calc
 		sddm-sugar-candy-git autofirma-bin vlc flatpak libreoffice-still
 		hyprpicker-git pywal-16-colors python-pywalfox colorz walogram noto-fonts-emoji
@@ -151,7 +154,9 @@ install_mounter() {
 }
 
 main() {
+	welcome_message
 	get_user_input
+	add_tty_login
 	install_paru_and_aur_pcks
 	configure_timeshift
 	configure_flatpak_and_add_repos
@@ -165,3 +170,5 @@ main() {
 	echo "Finished"
 	echo "All options will be enabled after rebooting"
 }
+
+main
