@@ -47,7 +47,7 @@ install_paru_and_aur_pcks() {
 	echo "DONE!"
 
 	echo "Installing Paru pckgs!"
-	paru_packages=(neovim-remote stow
+	paru_packages=(neovim-remote stow starship
 		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha nodejs
 		protonup-qt timeshift zram-generator preload pywal rofi-calc
 		sddm-sugar-candy-git autofirma-bin vlc flatpak libreoffice-still pokemon-colorscripts-git
