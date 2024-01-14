@@ -1,27 +1,28 @@
-//  __  __           _       _            
-// |  \/  | ___   __| |_   _| | ___  ___  
-// | |\/| |/ _ \ / _` | | | | |/ _ \/ __| 
-// | |  | | (_) | (_| | |_| | |  __/\__ \ 
-// |_|  |_|\___/ \__,_|\__,_|_|\___||___/ 
-//                                        
-//  
-// by Stephan Raabe (2023) 
-// ----------------------------------------------------- 
-//
 {
   // Workspaces
   "hyprland/workspaces": {
     "on-click": "activate",
     "active-only": false,
     "all-outputs": true,
-    "format": "{}",
+    "format": "{icon}",
     "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九",
+      "10": "十",
       "urgent": "",
-      "active": "",
-      "default": ""
+      "active": "󰟪", // Other icons  󰟪 
+      "default": " "
     },
+    "sort-by-number": true,
     "persistent-workspaces": {
-      "*": 0
+      "*": 5
     }
   },
   // Taskbar
@@ -44,71 +45,15 @@
   },
   // Hyprland Window
   "hyprland/window": {
+    "max-length": 50,
     "rewrite": {
-      "(.*) - Brave": "$1",
-      "(.*) - Chromium": "$1",
-      "(.*) - Brave Search": "$1",
-      "(.*) - Outlook": "$1",
-      "(.*) Microsoft Teams": "$1"
+      "(.*) — Mozilla Firefox": " $1",
+      "Mozilla Firefox": " New Tab",
+      "(.*) - Chromium": " $1",
+      "(.*) - NVIM": " $1",
+      // Dashboard title "(.*) - - NVIM": " Dashboard",
     },
     "separate-outputs": true
-  },
-  // Cliphist
-  "custom/cliphist": {
-    "format": "",
-    "on-click": "sleep 0.1 && ~/.scripts/cliphist.sh",
-    "on-click-right": "sleep 0.1 && ~/.scripts/cliphist.sh d",
-    "on-click-middle": "sleep 0.1 && ~/.scripts/cliphist.sh w",
-    "tooltip": false
-  },
-  // Wallpaper
-  "custom/wallpaper": {
-    "format": "",
-    "on-click-right": "~/.scripts/wallpaper-swww.sh",
-    "on-click": "~/.scripts/updatewal-swww.sh",
-    "tooltip": false
-  },
-  // Filemanager Launcher
-  "custom/filemanager": {
-    "format": "",
-    "on-click": "~/.scripts/filemanager.sh",
-    "tooltip": false
-  },
-  // Outlook Launcher
-  "custom/outlook": {
-    "format": "",
-    "on-click": "brave --app=https://outlook.office.com/mail/",
-    "tooltip": false
-  },
-  // Teams Launcher
-  "custom/teams": {
-    "format": "",
-    "on-click": "chromium --app=https://teams.microsoft.com/go",
-    "tooltip": false
-  },
-  // Brave Launcher
-  "custom/brave": {
-    "format": "",
-    "on-click": "brave",
-    "tooltip": false
-  },
-  // ChatGPT Launcher
-  "custom/chatgpt": {
-    "format": "",
-    "on-click": "brave --app=https://chat.openai.com",
-    "tooltip": false
-  },
-  // Rofi Calculator
-  "custom/calculator": {
-    "format": "",
-    "on-click": "~/.scripts/calculator.sh",
-    "tooltip": false
-  },
-  // Windows VM
-  "custom/windowsvm": {
-    "format": "",
-    "on-click": "~/private/launchvm.sh",
-    "tooltip": false
   },
   // Rofi Application Launcher
   "custom/appmenu": {
@@ -121,6 +66,19 @@
     "format": "",
     "on-click": "wlogout",
     "tooltip": false
+  },
+  // Auto audio inhibitor on I/O
+  "custom/audio_idle_inhibitor": {
+    "format": "{icon}",
+    "exec": "sway-audio-idle-inhibit --dry-print-both-waybar",
+    "exec-if": "which sway-audio-idle-inhibit",
+    "return-type": "json",
+    "format-icons": {
+      "output": "",
+      "input": "",
+      "output-input": "  ",
+      "none": ""
+    }
   },
   // Keyboard State
   "keyboard-state": {
@@ -145,18 +103,18 @@
   },
   // CPU
   "cpu": {
-    "format": "/ C {usage}% ",
+    "format": "|  {usage}% ",
     "on-click": "alacritty -e htop"
   },
   // Memory
   "memory": {
-    "format": "/ M {}% ",
+    "format": "|  {}% ",
     "on-click": "alacritty -e htop"
   },
   // Harddisc space used
   "disk": {
     "interval": 30,
-    "format": "   {percentage_used}% ",
+    "format": " {percentage_used}% ",
     "path": "/",
     "on-click": "alacritty -e htop"
   },

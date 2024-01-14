@@ -1,17 +1,7 @@
-// __        __          _                 
-// \ \      / /_ _ _   _| |__   __ _ _ __  
-//  \ \ /\ / / _` | | | | '_ \ / _` | '__| 
-//   \ V  V / (_| | |_| | |_) | (_| | |    
-//    \_/\_/ \__,_|\__, |_.__/ \__,_|_|    
-//                 |___/                   
-//  
-// by Stephan Raabe (2023) 
-// ----------------------------------------------------- 
-//
 {
     // Position TOP
     "position": "top",
-    "margin-top": 14,
+    "margin-top": 11,
     "margin-bottom": 0,
 
     // Position BOTTOM
@@ -23,7 +13,7 @@
     "layer": "top",
     "height": 16,
     "margin-left": 0,
-    "margin-right": 0,    
+    "margin-right": 0,
     "spacing": 0,
 
     // Load Modules
@@ -32,6 +22,7 @@
     // Modules Left
     "modules-left": [
         "custom/appmenu",
+        "tray",
         "wlr/taskbar",
         "hyprland/window"
     ],
@@ -43,7 +34,7 @@
 
     // Modules Right
     "modules-right": [
-        "tray",
+        "custom/audio_idle_inhibitor",
         "pulseaudio",
         "battery",
         "group/hardware",
@@ -52,15 +43,6 @@
         "custom/exit"
     ],
 
-    // Group Quicklinks
-    "group/quicklinks": {
-        "orientation": "horizontal",
-        "modules": [
-            "custom/filemanager",
-            "custom/chatgpt",
-            "custom/windowsvm"
-         ]
-    },
 
     // Group Hardware
     "group/hardware": {
