@@ -13,37 +13,25 @@ welcome_message() {
 	echo ""
 }
 
-get_user_input() {
-	window_manager=""
-	while true; do
-		read -rp "Do you want to install i3 or hyprland? (hH/iI/Xx(None)): " hin
-		case $hin in
-		[hH]*)
-			echo "Hyprland configuration started."
-			window_manager="install-hyprland.sh"
-			break
-			;;
-		[iI]*)
-			echo "I3 configuration started."
-			window_manager="install-i3.sh"
-			break
-			;;
-		[nN]*)
-			break
-			;;
-		*) echo "Please answer i, h or x." ;;
-		esac
-	done
-}
-
 add_tty_login() {
 	sudo cp resources/login_issue /etc/issue
 }
 
+install_pacman_pcks() {
+	# to watch timeshift and auto mkconf
+	pacman_pcks=(noto-fonts-cjk inotify-tools)
+	sudo pacman --noconfirm --needed -S "${pacman_pcks[@]}" || {
+		echo 'Failed to install pacman packages.'
+		exit 1
+	}
+	echo "DONE!"
+}
 install_paru_and_aur_pcks() {
 	echo "Installing paru"
 	git clone https://aur.archlinux.org/paru-bin.git
 	(cd paru-bin && makepkg -sic)
+	# Remove paru-bin as it is unneeded
+	rm -rf paru-bin
 	echo "DONE!"
 
 	echo "Installing Paru pckgs!"
@@ -51,15 +39,16 @@ install_paru_and_aur_pcks() {
 		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha nodejs
 		protonup-qt timeshift zram-generator preload pywal rofi-calc
 		sddm-sugar-candy-git autofirma-bin vlc flatpak libreoffice-still pokemon-colorscripts-git
-		hyprpicker-git pywal-16-colors python-pywalfox colorz walogram noto-fonts-emoji
+		hyprpicker-git pywal-16-colors python-pywalfox colorz walogram noto-fonts-emoji fzf
 	) # May need java-8-openjdk
-	pywalfox install
 
 	paru --noconfirm --needed -S "${paru_packages[@]}" || {
 		echo 'Failed to install paru packages.'
 		exit 1
 	}
 	echo "DONE!"
+	pywalfox install
+
 }
 
 configure_timeshift() {
@@ -69,6 +58,15 @@ configure_timeshift() {
 	sudo sed -i 's/"schedule_monthly": "false"/"schedule_monthly": "true"/g' /etc/timeshift/timeshift.json
 	sudo sed -i 's/"count_monthly": "[0-9]*"/"count_monthly": "6"/g' /etc/timeshift/timeshift.json
 	sudo sed -i 's/"count_weekly": "[0-9]*"/"count_weekly": "4"/g' /etc/timeshift/timeshift.json
+
+	# Make grub track and update on timeshift snapshots
+	sudo sed -i 's|ExecStart=/usr/bin/grub-btrfsd --syslog /.snapshots|ExecStart=/usr/bin/grub-btrfsd --syslog --timeshift-auto|' /etc/systemd/system/grub-btrfsd.service
+	# Start service if not already running
+	# sudo systemctl start grub-btrfsd
+	# Reload config
+	sudo systemctl daemon-reload
+	# Restart the service
+	sudo systemctl restart grub-btrfsd
 	echo "DONE!"
 }
 
@@ -123,11 +121,8 @@ change_display_manager() {
 }
 
 add_window_manager() {
-	echo "Adding selected windowmanager"
-	if [[ -n $window_manager ]]; then
-		# shellcheck disable=SC1090
-		source "$window_manager"
-	fi
+	echo "Installing hyprland"
+	source install-hyprland.sh
 	echo "DONE!"
 }
 
@@ -157,6 +152,7 @@ main() {
 	welcome_message
 	get_user_input
 	add_tty_login
+	install_pacman_pcks
 	install_paru_and_aur_pcks
 	configure_timeshift
 	configure_flatpak_and_add_repos

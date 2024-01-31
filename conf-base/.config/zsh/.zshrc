@@ -9,8 +9,11 @@ plug "$HOME/.config/zsh/bindings.zsh"
 
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
-# plug "zap-zsh/zap-prompt"
 plug "zsh-users/zsh-syntax-highlighting"
+
+# Fuzzyfinding stuff
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 # Load and initialise completion system
 autoload -Uz compinit
@@ -21,12 +24,10 @@ compinit
 eval "$(starship init zsh)"
 
 # -----------------------------------------------------
-# PYWAL
-# -----------------------------------------------------
+# PYWAL -----------------------------------------------------
 cat ~/.cache/wal/sequences
 
 # -----------------------------------------------------
 # PFETCH
 # -----------------------------------------------------
-# echo ""
-pokemon-colorscripts --no-title -n axew
+pokemon-colorscripts --no-title -n gengar

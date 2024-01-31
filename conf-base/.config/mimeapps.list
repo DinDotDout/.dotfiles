@@ -4,3 +4,4 @@ x-scheme-handler/https=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
 text/plain=nvim.desktop
+application/x-ndjson=nvim.desktop

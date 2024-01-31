@@ -1,14 +1,6 @@
 #!/bin/sh
-# Ctrl+Backspace: kill the word backward
-bindkey -M emacs '^H' backward-kill-word
-bindkey -M viins '^H' backward-kill-word
-bindkey -M vicmd '^H' backward-kill-word
 
-# Ctrl+Delete: kill the word forward
-bindkey -M emacs '^[[3;5~' kill-word
-bindkey -M viins '^[[3;5~' kill-word
-bindkey -M vicmd '^[[3;5~' kill-word
-
+# Jump words with ctrl arrowkeys
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
@@ -34,3 +26,19 @@ lfcd () {
 }
 
 bindkey -s '^o' '^urangercd\n'
+
+
+# Shell-GPT integration ZSH v0.1
+_sgpt_zsh() {
+if [[ -n "$BUFFER" ]]; then
+    _sgpt_prev_cmd=$BUFFER
+    BUFFER+="⌛"
+    zle -I && zle redisplay
+    BUFFER=$(sgpt --shell <<< "$_sgpt_prev_cmd")
+    zle end-of-line
+fi
+}
+zle -N _sgpt_zsh
+bindkey ^g _sgpt_zsh
+
+

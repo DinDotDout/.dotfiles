@@ -11,7 +11,8 @@
       "command": "alacritty --class alacritty-dropterm",
       "animation": "fromTop",
       "lazy": true,
-      "size": "50% 50%"
+      "size": "50% 50%",
+      "unfocus": "hide"
     },
     "chromium-gpt": {
       "command": "chromium --app=https://bard.google.com/chat",
@@ -39,11 +40,23 @@
       "lazy": true,
       "unfocus": "hide"
     },
+    "whatsdesk2": {
+      "command": "whatsdesk",
+      "lazy": true,
+      "size": "50% 60%",
+      "class": "whatsdesk"
+    },
+    "whatsdesk": {
+      "command": "chromium --app=https://web.whatsapp.com/",
+      "lazy": true,
+      "size": "50% 60%",
+      "class": "whatsdesk"
+    },
     "telegram": {
       "command": "telegram-desktop",
       "lazy": true,
       "size": "50% 60%",
-      "class": "Microsoft-edge"
+      "class": "org.telegram.desktop"
     },
     "volume": {
       "command": "pavucontrol",

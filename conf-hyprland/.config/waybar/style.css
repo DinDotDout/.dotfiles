@@ -11,8 +11,7 @@
 window#waybar {
     border-bottom: 0px solid #ffffff;
     background: transparent;
-    transition-property: background-color;
-    transition-duration: .5s;
+    transition-property: background-color; transition-duration: .5s;
 }
 
 .modules-left{
@@ -90,8 +89,9 @@ window#waybar {
 
 tooltip {
     border-radius: 10px;
-    background-color: #FFFFFF;
-    opacity:0.8;
+    border: 2px solid @color3;
+    background-color: @background;
+    opacity:0.9;
     padding:20px;
     margin:0px;
     font-size: 15px;
@@ -99,7 +99,7 @@ tooltip {
 }
 
 tooltip label {
-    color: @color2;
+    color: @foreground;
 }
 
 #window {
@@ -119,11 +119,9 @@ window#waybar.empty #window {
 }
 
 #taskbar {
-    /* background: @color2; */
     background: #FFFFFF;
     margin: 3px 15px 3px 0px;
     padding:0px;
-    /*padding: 2px 3px 1px 3px;*/
     border-radius: 15px;
     font-weight: normal;
     font-style: normal;
@@ -132,9 +130,18 @@ window#waybar.empty #window {
 }
 
 #taskbar button {
+    border-radius: 15px;
     margin:0;
     padding: 0px 5px 0px 5px;
 }
+
+#taskbar button:hover {
+    color: #FFFFFF;
+    background: @color3;
+    border-radius: 15px;
+    opacity:0.7;
+}
+
 
 
 .modules-left > widget:first-child > #workspaces {
@@ -296,7 +303,6 @@ window#waybar.empty #window {
     font-style: normal;
     opacity:0.8;
     border: 3px solid #FFFFFF;
-
 }
 
 #tray > .passive {

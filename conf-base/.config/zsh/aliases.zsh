@@ -42,6 +42,13 @@ alias \
   gnv="nvim --listen /tmp/nvimsocket" \
   conf="ranger $HOME/.config/" \
   dotf="ranger $HOME/.dotfiles/" \
-
+  roblox="cd /home/joan/.var/app/io.github.vinegarhq.Vinegar/data/vinegar/prefix/dosdevices/c:/users/joan/Documents" \
+  studio="flatpak run io.github.vinegarhq.Vinegar studio"
 alias gpt="com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1' &"
 alias scripts="cd ~/.local/bin/"
+
+alias \
+  Qtile="startx"
+
+alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
+

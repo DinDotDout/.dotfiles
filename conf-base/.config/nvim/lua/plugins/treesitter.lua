@@ -22,6 +22,8 @@ return {
         "vim",
         "yaml",
         "css",
+        "rust",
+        "cpp",
       })
     end,
   },
