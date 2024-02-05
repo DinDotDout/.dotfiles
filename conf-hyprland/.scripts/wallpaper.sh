@@ -34,6 +34,14 @@ case $1 in
 esac
 
 echo "Changing theme..."
+# Find the process ID (PID) of the kitty instance you want to reload
+PIDS=$(pgrep kitty)
+
+# Send the SIGUSR1 signal (reload config) to all kitty processes
+for PID in $PIDS; do
+	kill -SIGUSR1 $PID
+done
+
 # -----------------------------------------------------
 # Get new theme
 # -----------------------------------------------------
@@ -60,8 +68,6 @@ swww img "$wallpaper" \
 
 pywalfox update
 walogram
-
-sleep 1
 
 # -----------------------------------------------------
 # Send notification
