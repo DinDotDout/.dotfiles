@@ -1,0 +1,63 @@
+[pyprland]
+plugins = [
+  "scratchpads",
+  "workspaces_follow_focus",
+  "lost_windows",
+]
+
+# [expose]
+# include_special=false
+
+
+[scratchpads.gptbing]
+  command= "flatpak run com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1'"
+  animation= "fromTop"
+  class_match=true
+  class= "Microsoft-edge"
+  margin= 70
+  size= "50% 50%"
+  lazy= true
+
+[scratchpads.up-term]
+  command= "kitty --class kitty-dropterm"
+  animation= "fromTop"
+  unfocus= "hide"
+  size= "50% 50%"
+  lazy= true
+
+[scratchpads.drop-term]
+  command= "kitty --class kitty-dropterm"
+  animation= "fromBottom"
+  unfocus= "hide"
+  size= "50% 50%"
+  lazy= true
+
+[scratchpads.whatsapp]
+  command= "chromium --app=https://web.whatsapp.com/"
+  animation=""
+  size= "50% 60%"
+  lazy= true
+
+[scratchpads.telegram]
+  command= "telegram-desktop"
+  animation=""
+  size= "50% 60%"
+  class= "org.telegram.desktop"
+  class_match=true
+  lazy= true
+
+
+[scratchpads.volume]
+  command= "pavucontrol"
+  animation= "fromRight"
+  lazy= true
+
+[scratchpads.discord]
+  command= "discord"
+  size= "50% 60%"
+  animation=""
+  class= "discord"
+  class_match=true
+  lazy= true
+
+
