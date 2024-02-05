@@ -24,4 +24,4 @@ swaylock --text-color=$text \
 	--text-ver-color=$ring \
 	--text-wrong-color=$ring \
 	--text-caps-lock-color=$ring \
-	--bs-hl-color=$ring
+	--bs-hl-color=$ring &
