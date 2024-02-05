@@ -19,7 +19,7 @@ add_tty_login() {
 
 install_pacman_pcks() {
 	# to watch timeshift and auto mkconf
-	pacman_pcks=(noto-fonts-cjk inotify-tools)
+	pacman_pcks=(noto-fonts-cjk inotify-tools kitty yazi)
 	sudo pacman --noconfirm --needed -S "${pacman_pcks[@]}" || {
 		echo 'Failed to install pacman packages.'
 		exit 1
