@@ -6,7 +6,8 @@ ring=$color7
 keyh_log=$color6
 
 # Apply the colors to swaylock
-swaylock --text-color=$text \
+swaylock --daemonize \
+	--text-color=$text \
 	--key-hl-color=$keyh_log \
 	--ring-color=$ring \
 	--ring-clear-color=$ring \
@@ -24,4 +25,4 @@ swaylock --text-color=$text \
 	--text-ver-color=$ring \
 	--text-wrong-color=$ring \
 	--text-caps-lock-color=$ring \
-	--bs-hl-color=$ring &
+	--bs-hl-color=$ring
