@@ -20,12 +20,12 @@ local autocmd = vim.api.nvim_create_autocmd
 -- })
 
 autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = { "*.vert", "*.frag", "*.ply", "*.lst", "*.obj", "*.gltf", "*.glb" },
+  pattern = { "*.comp", "*.vert", "*.frag", "*.ply", "*.lst", "*.obj", "*.gltf", "*.glb" },
   command = "set filetype=glsl",
   -- command = "LspStart glslls",
 })
 autocmd({ "BufRead", "BufNewFile" }, {
-  pattern = { "*.glsl", "*.vert", "*.frag" },
+  pattern = { "*.comp", "*.glsl", "*.vert", "*.frag" },
   command = "setlocal commentstring=//%s",
 })
 

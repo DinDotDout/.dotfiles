@@ -34,9 +34,7 @@ alias \
 alias \
   z="zathura" \
   g="git" \
-  lf="lfub" \
   yz="yazi" \
-  rn="ranger"
 
 alias \
   nv='nvim' \
