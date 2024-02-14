@@ -5,8 +5,8 @@ local keymap = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- Recenter on large movement
-keymap("n", "<S-h>", "<S-h>zz")
-keymap("n", "<S-l>", "<S-l>zz")
+-- keymap("n", "<S-h>", "<S-h>zz")
+-- keymap("n", "<S-l>", "<S-l>zz")
 
 keymap("v", "<S-h>", "<S-h>zz")
 keymap("v", "<S-l>", "<S-l>zz")
