@@ -48,8 +48,7 @@ alias \
 alias gpt="com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1' &"
 alias scripts="cd ~/.local/bin/"
 
-alias \
-  Qtile="startx"
 
+# Winget dotfile change location
 alias wget=wget --hsts-file="$XDG_DATA_HOME/wget-hsts"
 

@@ -104,6 +104,10 @@ change_to_zsh_shell() {
 	chsh -s /usr/bin/zsh
 	zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1 --keep
 	echo "DONE!"
+
+	# Move zsh config to .config/zsh
+	grep -qxF 'export ZDOTDIR="$HOME"/.config/zsh' /etc/zsh/zshenv || echo 'export ZDOTDIR="$HOME"/.config/zsh' | sudo tee -a /etc/zsh/zshenv
+
 }
 
 change_display_manager() {
