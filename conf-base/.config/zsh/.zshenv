@@ -2,6 +2,9 @@
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:${$(find ~/.local/bin -maxdepth 1 -type d -printf %p:)%%:}"
 
+# Quick path access
+export CDPATH=.:"$HOME/Documents/projects/":"$HOME/.config/"
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
@@ -24,7 +27,6 @@ export TERMINFO_DIRS="$XDG_DATA_HOME"/terminfo:/usr/share/terminfo
 export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export DOTNET_CLI_HOME="$XDG_DATA_HOME"/dotnet
-export VIMINIT='source $HOME/.config/vim/vimrc'
 
 # export PARALLEL_HOME="$XDG_CONFIG_HOME"/parallel
 
