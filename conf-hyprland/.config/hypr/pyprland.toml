@@ -2,12 +2,7 @@
 plugins = [
   "scratchpads",
   "workspaces_follow_focus",
-  "lost_windows",
 ]
-
-# [expose]
-# include_special=false
-
 
 [scratchpads.gptbing]
   command= "flatpak run com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1'"
