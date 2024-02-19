@@ -6,7 +6,7 @@
 }
 {
     "label" : "hibernate",
-    "action" : "sleep 1; systemctl hibernate",
+    "action" : "sleep 1; $HOME/.dotfiles/wm_scripts/swaylock.sh && systemctl hibernate",
     "text" : "Hibernate",
     "keybind" : "h"
 }
@@ -24,7 +24,7 @@
 }
 {
     "label" : "suspend",
-    "action" : "sleep 1; systemctl suspend",
+    "action" : "sleep 1; $HOME/.dotfiles/wm_scripts/swaylock.sh && systemctl suspend",
     "text" : "Suspend",
     "keybind" : "u"
 }
