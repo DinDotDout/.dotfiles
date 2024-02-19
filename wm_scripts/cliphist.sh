@@ -13,13 +13,9 @@ case $1 in
 d) # Delete entry
 	cliphist list | rofi -dmenu -replace -config ~/.config/rofi/config-cliphist.rasi | cliphist delete
 	;;
-w) # Delete all
-	if [ $(echo -e "Clear\nCancel" | rofi -dmenu -replace -config ~/.config/rofi/config-short.rasi) == "Clear" ]; then
-		cliphist wipe
-	fi
-	;;
 
 *) # Open cliphist
 	cliphist list | rofi -dmenu -replace -config ~/.config/rofi/config-cliphist.rasi | cliphist decode | wl-copy
 	;;
 esac
+

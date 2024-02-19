@@ -8,12 +8,11 @@
 # by Stephan Raabe (2023) 
 # ----------------------------------------------------- 
 */
-
 /* ---- Configuration ---- */
 configuration {
     modi:                       "drun,run";
     font:                       "Fira Sans Bold 10";
-    show-icons:                 false;
+    show-icons:                 true;
     icon-theme:                 "Papirus-Dark";
     display-drun:               "APPS";
     display-run:                "RUN";
@@ -24,7 +23,6 @@ configuration {
     me-accept-entry:            "MousePrimary";
     drun-display-format:        "{name}";
     window-format:              "{w} · {c} · {t}";
-    
 }
 
 /* ---- Load pywal colors (custom wal template) ---- */
@@ -212,7 +210,7 @@ element alternate.active {
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        32px;
+    size:                        100px;
     cursor:                      inherit;
 }
 
