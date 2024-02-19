@@ -1,0 +1,3 @@
+[submodule "conf-base/.config/nvim"]
+	path = conf-base/.config/nvim
+	url = git@github.com:DinDotDout/nvim.git
