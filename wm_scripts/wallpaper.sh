@@ -42,10 +42,10 @@ function update_themes {
 	~/.config/waybar/launch.sh # waybar theme
 
 	# kitty theme
-	PIDS=$(pgrep kitty)
-	for PID in $PIDS; do
-		kill -SIGUSR1 $PID
-	done
+	# PIDS=$(pgrep kitty)
+	# for PID in $PIDS; do
+	# 	kill -SIGUSR1 $PID
+	# done
 
 	pywalfox update # firefox theme
 	walogram        # telegram theme

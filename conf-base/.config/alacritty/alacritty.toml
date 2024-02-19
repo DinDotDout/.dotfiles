@@ -7,7 +7,7 @@ draw_bold_text_with_bright_colors = true
 TERM = "xterm-256color"
 
 [font]
-size = 10.5
+size = 11.0
 
 [font.bold]
 family = "RobotoMono Nerd Font"
@@ -27,7 +27,7 @@ style = "Regular"
 
 [font.offset]
 x = 0
-y = 1
+y = 0
 
 [[keyboard.bindings]]
 action = "Paste"
