@@ -26,6 +26,7 @@ install_pacman_pcks() {
 	}
 	echo "DONE!"
 }
+
 install_paru_and_aur_pcks() {
 	echo "Installing paru"
 	git clone https://aur.archlinux.org/paru-bin.git
@@ -35,7 +36,7 @@ install_paru_and_aur_pcks() {
 	echo "DONE!"
 
 	echo "Installing Paru pckgs!"
-	paru_packages=(neovim-remote stow starship noto-fonts-emoji
+	paru_packages=(webcord neovim-remote stow starship noto-fonts-emoji
 		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha nodejs
 		protonup-qt timeshift zram-generator preload pywal rofi-calc redshift-wayland-git
 		sddm-sugar-candy-git autofirma-bin vlc flatpak libreoffice-still pokemon-colorscripts-git
@@ -46,6 +47,7 @@ install_paru_and_aur_pcks() {
 		echo 'Failed to install paru packages.'
 		exit 1
 	}
+    pipx install colorz # Pywal backend for brighter colors
 	echo "DONE!"
 	pywalfox install
 
