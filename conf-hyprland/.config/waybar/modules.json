@@ -48,7 +48,9 @@
       "(.*) — Mozilla Firefox": " $1",
       "Mozilla Firefox": " New Tab",
       "(.*) - Chromium": " $1",
-      "(.*) - NVIM": " $1"
+      "(.*) - NVIM": " $1",
+      "ZSH": "󰄛 ZSH"
+
       // Dashboard title "(.*) - - NVIM": " Dashboard",
     },
     "separate-outputs": true
@@ -56,7 +58,7 @@
   // Rofi Application Launcher
   "custom/appmenu": {
     "format": "",
-    "on-click": "~/.scripts/applauncher.sh",
+    "on-click": "rofi -show drun -replace",
     "tooltip": false
   },
   // Power Menu
