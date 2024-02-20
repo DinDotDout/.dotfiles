@@ -27,6 +27,18 @@ install_pacman_pcks() {
 	echo "DONE!"
 }
 
+# Needed to ensure tmux has package manager
+add_tmux() {
+    echo "Adding tmux"
+    sudo pacman --noconfirm --needed -S tmux || {
+        echo 'Failed to install tmux.'
+        exit 1
+    }
+    echo "DONE!"
+    mkdir -p $HOME/.config/tmux/plugins # Just in case
+    git clone https://github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins/tpm
+}
+
 install_paru_and_aur_pcks() {
 	echo "Installing paru"
 	git clone https://aur.archlinux.org/paru-bin.git
@@ -159,6 +171,7 @@ main() {
 	get_user_input
 	add_tty_login
 	install_pacman_pcks
+    add_tmux
 	install_paru_and_aur_pcks
 	configure_timeshift
 	configure_flatpak_and_add_repos
