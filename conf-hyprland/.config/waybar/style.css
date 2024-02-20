@@ -26,7 +26,7 @@ window#waybar > box {
 @define-color box_shadow_color rgba(30, 30, 30, 0.5);
 .modules-left {
   box-shadow: 3px 2.5px 2px 1px @box_shadow_color;
-  border: 2px solid @color3;
+  /* border: 2px solid @color3; */
   border-radius: 10px 0px 40px 10px;
   background-color: @background;
   padding: 0px 20px 0px 0px;
@@ -35,7 +35,7 @@ window#waybar > box {
 
 .modules-right {
   box-shadow: 3px 2.5px 2px 1px @box_shadow_color;
-  border: 2px solid @color3;
+  /* border: 2px solid @color3; */
   border-radius: 40px 10px 10px 0px;
   background-color: @background;
   padding: 0px 0px 0px 20px;
@@ -43,7 +43,7 @@ window#waybar > box {
 }
 .modules-center {
   box-shadow: 3px 2.5px 2px 1px @box_shadow_color;
-  border: 2px solid @color3;
+  /* border: 2px solid @color3; */
   border-radius: 40px 0px 40px 0px;
   background-color: @background;
   padding: 0px 20px;
@@ -131,7 +131,7 @@ window#waybar.empty #window {
   background: rgba(255, 255, 255, 0.8);
   margin: 4px 15px 4px 0px;
   padding: 0px;
-  border-radius: 10px;
+  border-radius: 8px;
   font-weight: normal;
   font-style: normal;
   /* opacity: 0.9; */
