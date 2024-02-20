@@ -10,22 +10,31 @@
   border-radius: 0px;
   font-size: 16px;
 }
-
 window#waybar {
-  border-bottom: 0px solid #ffffff;
+  /* border-bottom: 0px solid #ffffff; */
   background: transparent;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
 
+window#waybar > box {
+  border-radius: 8px;
+  margin: 4px 8px 8px 8px;
+  /* background-color: rgba(32, 32, 32, 0.75); */
+  /* box-shadow: 4px 4px 2px 1px #101010; */
+}
+@define-color box_shadow_color rgba(30, 30, 30, 0.5);
 .modules-left {
+  box-shadow: 3px 2.5px 2px 1px @box_shadow_color;
   border: 2px solid @color3;
   border-radius: 10px 0px 40px 10px;
   background-color: @background;
   padding: 0px 20px 0px 0px;
   margin: 0px 12px;
 }
+
 .modules-right {
+  box-shadow: 3px 2.5px 2px 1px @box_shadow_color;
   border: 2px solid @color3;
   border-radius: 40px 10px 10px 0px;
   background-color: @background;
@@ -33,20 +42,21 @@ window#waybar {
   margin: 0px 12px;
 }
 .modules-center {
+  box-shadow: 3px 2.5px 2px 1px @box_shadow_color;
   border: 2px solid @color3;
   border-radius: 40px 0px 40px 0px;
   background-color: @background;
   padding: 0px 20px;
 }
 
-#workspaces {
-  background: @background;
-  margin: 1px 1px 1px 1px;
-  border-radius: 60px 0px 60px 0px;
-  font-weight: bold;
-  font-style: normal;
-  color: #ffffff;
-}
+/* #workspaces { */
+/*   background: @background; */
+/*   margin: 1px 1px 1px 1px; */
+/*   border-radius: 60px 0px 60px 0px; */
+/*   font-weight: bold; */
+/*   font-style: normal; */
+/*   color: #ffffff; */
+/* } */
 
 #workspaces button {
   padding: 1px 9px;
