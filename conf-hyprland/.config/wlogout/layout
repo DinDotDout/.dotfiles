@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "sleep 1; $HOME/.scripts/swaylock.sh",
+    "action" : "sleep 1; $HOME/.dotfiles/wm_scripts/swaylock.sh",
     "text" : "Lock",
     "keybind" : "l"
 }
