@@ -177,7 +177,7 @@ main() {
 	add_zram
 	prepare_dotfiles
 	change_to_zsh_shell
-	change_display_manager
+	# change_display_manager # No diplay manager for now
 	add_window_manager
 	create_snapshot
 
