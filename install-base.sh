@@ -168,7 +168,6 @@ install_mounter() {
 
 main() {
 	welcome_message
-	get_user_input
 	add_tty_login
 	install_pacman_pcks
     add_tmux
