@@ -52,7 +52,7 @@ install_paru_and_aur_pcks() {
 		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha nodejs
 		protonup-qt timeshift zram-generator preload pywal rofi-calc redshift-wayland-git
 		sddm-sugar-candy-git autofirma-bin vlc flatpak libreoffice-still pokemon-colorscripts-git
-		hyprpicker-git pywal-16-colors python-pywalfox colorz walogram fzf
+		pywal-16-colors python-pywalfox colorz walogram fzf
 	)
 
 	paru --noconfirm --needed -S "${paru_packages[@]}" || {
