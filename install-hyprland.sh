@@ -2,7 +2,7 @@
 #(C) 2023 Joan Dot Saster, GPL v2.0 or later. No warranty.
 pacman_packages=(
 	hyprland wl-clipboard xdg-desktop-portal-hyprland
-	waybar grim slurp cliphist swayidle
+	waybar grim slurp cliphist swayidle swappy
 )
 
 sudo pacman --noconfirm --needed -S "${pacman_packages[@]}"
