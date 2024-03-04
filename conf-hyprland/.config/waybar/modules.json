@@ -122,12 +122,12 @@
   // Network
   "network": {
     "format": "{ifname}",
-    "format-wifi": "   {signalStrength}%",
-    "format-ethernet": "󰈀  {ipaddr}",
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": "󰈀 {ipaddr}",
     "format-disconnected": "", //An empty format will hide the module.
     "tooltip-format": " {ifname} via {gwaddri}",
-    "tooltip-format-wifi": "   {essid} ({signalStrength}%)",
-    "tooltip-format-ethernet": "  {ifname} ({ipaddr}/{cidr})",
+    "tooltip-format-wifi": " {essid} ({signalStrength}%)",
+    "tooltip-format-ethernet": " {ifname} ({ipaddr}/{cidr})",
     "tooltip-format-disconnected": "Disconnected",
     "max-length": 50
   },
@@ -139,8 +139,8 @@
       "critical": 15
     },
     "format": "{icon} {capacity}%",
-    "format-charging": "  {capacity}%",
-    "format-plugged": "  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
     "format-alt": "{icon} {time}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
@@ -162,7 +162,7 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", " ", " "]
+      "default": ["", "", ""]
     },
     "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
   },
