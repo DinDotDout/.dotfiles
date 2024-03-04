@@ -68,6 +68,8 @@ window#waybar > box {
   background-color: @color2;
   transition: all 0.4s ease-in-out;
   opacity: 0.4;
+  /* box-shadow: inset -3px -2px 1px rgba(0, 0, 0, 0.725); */
+  /* box-shadow: inset 2px 3px 2px rgba(0, 0, 0, 0.725); */
 }
 
 #workspaces button.empty {
@@ -243,6 +245,7 @@ window#waybar.empty #window {
 #network.ethernet {
   background-color: @color2;
   color: #ffffff;
+  /* box-shadow: inset 2px 3px 2px rgba(0, 0, 0, 0.725); */
 }
 
 #network.wifi {

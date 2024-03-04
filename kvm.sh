@@ -1,13 +1,13 @@
 #!/bin/bash
-#  _  ____     ____  __  
-# | |/ /\ \   / /  \/  | 
-# | ' /  \ \ / /| |\/| | 
-# | . \   \ V / | |  | | 
-# |_|\_\   \_/  |_|  |_| 
-#                        
-#  
-# by Stephan Raabe (2023) 
-# ----------------------------------------------------- 
+#  _  ____     ____  __
+# | |/ /\ \   / /  \/  |
+# | ' /  \ \ / /| |\/| |
+# | . \   \ V / | |  | |
+# |_|\_\   \_/  |_|  |_|
+#
+#
+# by Stephan Raabe (2023)
+# -----------------------------------------------------
 
 # ------------------------------------------------------
 # Install Script for Libvirt
@@ -29,8 +29,8 @@ echo "Open sudo vim /etc/libvirt/libvirtd.conf:"
 echo 'Remove # at the following lines: unix_sock_group = "libvirt" and unix_sock_rw_perms = "0770"'
 read -p "Press any key to open libvirtd.conf: " c
 sudo vim /etc/libvirt/libvirtd.conf
-sudo echo 'log_filters="3:qemu 1:libvirt"' >> /etc/libvirt/libvirtd.conf
-sudo echo 'log_outputs="2:file:/var/log/libvirt/libvirtd.log"' >> /etc/libvirt/libvirtd.conf
+echo 'log_filters="3:qemu 1:libvirt"' | sudo tee -a /etc/libvirt/libvirtd.conf
+echo 'log_outputs="2:file:/var/log/libvirt/libvirtd.log"' | sudo tee -a /etc/libvirt/libvirtd.conf
 
 # ------------------------------------------------------
 # Add user to the group
@@ -65,4 +65,3 @@ sudo systemctl restart libvirtd
 sudo virsh net-autostart default
 
 echo "Please restart your system with reboot."
-
