@@ -1,5 +1,5 @@
 #!/bin/bash
-packages=(vulkan-devel glfw_wayland glm glslc shaderc)
+packages=(vulkan-devel glfw-wayland glm glslang shaderc)
 sudo pacman --noconfirm --needed -S "${packages[@]}" || {
 	echo 'Failed to install pacman packages.'
 	exit 1
@@ -7,7 +7,7 @@ sudo pacman --noconfirm --needed -S "${packages[@]}" || {
 echo "DONE!"
 
 # lsp for glsl
-paru_packages=(glsl_analyzer)
+paru_packages=(glsl-language-server)
 paru --noconfirm --needed -S "${paru_packages[@]}" || {
 	echo 'Failed to install paru packages.'
 	exit 1
