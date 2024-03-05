@@ -21,6 +21,17 @@ style = "Bold Italic"
 family = "RobotoMono Nerd Font"
 style = "Italic"
 
+[cursor.style]
+shape = "Block"
+blinking = "On"
+# blink_interval = 750
+# [cursor.vi_mode_style]
+# shape = "Block"
+#
+# blinking = "On"
+# [cursor]
+# blink_interval = 750
+
 [font.normal]
 family = "RobotoMono Nerd Font"
 style = "Regular"
@@ -107,34 +118,12 @@ key = "Home"
 mode = "~Alt"
 mods = "Shift"
 
-# [schemes.tokyo-night.bright]
-# black = "#444b6a"
-# blue = "#7da6ff"
-# cyan = "#0db9d7"
-# green = "#b9f27c"
-# magenta = "#bb9af7"
-# red = "#ff7a93"
-# yellow = "#ff9e64"
-#
-# [schemes.tokyo-night.normal]
-# black = "#32344a"
-# blue = "#7aa2f7"
-# cyan = "#449dab"
-# green = "#9ece6a"
-# magenta = "#ad8ee6"
-# red = "#f7768e"
-# white = "#787c99"
-# yellow = "#e0af68"
-#
-# [schemes.tokyo-night.primary]
-# background = "#1a1b26"
-# foreground = "#a9b1d6"
-
 [scrolling]
 history = 5000
 
 [window]
-opacity = 0.85
+# opacity = 0.0
+opacity = 0.9
 title = "Alacritty"
 
 [window.class]

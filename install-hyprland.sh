@@ -8,7 +8,7 @@ pacman_packages=(
 sudo pacman --noconfirm --needed -S "${pacman_packages[@]}"
 pywalfox install
 
-paru_packages=(swww swaylock pyprland hyprpicker-git wlogout wlr-randr sway-audio-idle-inhibit-git)
+paru_packages=(swww swaylock pyprland hyprpicker-git wlogout wlr-randr sway-audio-idle-inhibit-git hypridle)
 paru --noconfirm --needed -S "${paru_packages[@]}"
 # paru --noconfirm --needed -S swww swaylock-effects pyprland hyprpicker wlogout wlr-randr
 

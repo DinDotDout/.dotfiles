@@ -14,14 +14,14 @@ plugins = [
   lazy= true
 
 [scratchpads.up-term]
-  command= "kitty --class kitty-dropterm"
+  command= "alacritty --class dropterm-top"
   animation= "fromTop"
   unfocus= "hide"
   size= "50% 50%"
   lazy= true
 
 [scratchpads.drop-term]
-  command= "kitty --class kitty-dropterm"
+  command= "alacritty --class dropterm"
   animation= "fromBottom"
   unfocus= "hide"
   size= "50% 50%"
@@ -29,23 +29,24 @@ plugins = [
 
 [scratchpads.whatsapp]
   command= "chromium --app=https://web.whatsapp.com/"
-  animation=""
+  position= "25% 20%"
   size= "50% 60%"
   lazy= true
 
 [scratchpads.telegram]
   command= "telegram-desktop"
-  animation=""
+  # position= "25% 20%"
+  animation = "fromBottom"
   size= "50% 60%"
   class= "org.telegram.desktop"
-  class_match=true
+  # class_match=true
   lazy= true
-
 
 [scratchpads.volume]
   command= "pavucontrol"
   animation= "fromRight"
   lazy= true
+  size= "15% 25%"
 
 [scratchpads.discord]
   command= "discord"

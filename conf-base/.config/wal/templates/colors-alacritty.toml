@@ -1,4 +1,5 @@
 [colors]
+transparent_background_colors = true
 
   [colors.primary]
   background = "{background}"
