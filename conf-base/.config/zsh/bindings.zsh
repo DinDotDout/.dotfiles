@@ -28,7 +28,7 @@ lfcd () {
 bindkey -s '^o' '^urangercd\n'
 bindkey -s '^n' 'nvim .\n'
 bindkey -s '^y' 'yazi\n'
-
+bindkey -s '^f' "tmux-sessionizer\n"
 
 # Shell-GPT integration ZSH v0.1
 # _sgpt_zsh() {
