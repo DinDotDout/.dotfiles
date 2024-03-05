@@ -1,12 +1,6 @@
 /*
-#  ____        __ _  
-# |  _ \ ___  / _(_) 
-# | |_) / _ \| |_| | 
-# |  _ < (_) |  _| | 
-# |_| \_\___/|_| |_| 
-#                    
-# by Stephan Raabe (2023) 
-# ----------------------------------------------------- 
+# Stephan Raabe (2023) 
+# Modified by DinDotDout
 */
 /* ---- Configuration ---- */
 configuration {
@@ -39,7 +33,7 @@ window {
     margin:                       0px; 
     color:                        #FFFFFF;
     border:                       3px;
-    border-color:                 #FFFFFF;
+    border-color:                 @color11;
     cursor:                       "default";
     transparency:                 "real";
     location:                     north;
@@ -97,7 +91,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                      true;
     expand:                       false;
-    str:                          "";
+    str:                          "";
     background-color:             transparent;
     text-color:                   inherit;
 }
@@ -146,7 +140,7 @@ listview {
     fixed-height:                 true;
     fixed-columns:                true;
     spacing:                      0px;
-    padding:                      10px;
+    padding:                      5px;
     margin:                       0px;
     background-color:             @background;
     border:0px;
