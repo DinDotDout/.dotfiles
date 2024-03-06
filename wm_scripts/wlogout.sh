@@ -2,5 +2,5 @@
 if pgrep -x "wlogout" >/dev/null; then
     pkill -x "wlogout"
 else
-    wlogout
+    wlogout -s -n
 fi
