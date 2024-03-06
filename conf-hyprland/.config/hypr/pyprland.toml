@@ -1,59 +1,64 @@
 [pyprland]
-plugins = [
-  "scratchpads",
-  "workspaces_follow_focus",
-]
+plugins = ["scratchpads", "workspaces_follow_focus"]
 
 [scratchpads.gptbing]
-  command= "flatpak run com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1'"
-  animation= "fromTop"
-  class_match=true
-  class= "Microsoft-edge"
-  margin= 70
-  size= "50% 50%"
-  lazy= true
+command = "flatpak run com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1'"
+animation = "fromTop"
+class_match = true
+class = "Microsoft-edge"
+margin = 70
+size = "60% 60%"
+lazy = true
 
 [scratchpads.up-term]
-  command= "alacritty --class dropterm-top"
-  animation= "fromTop"
-  unfocus= "hide"
-  size= "50% 50%"
-  lazy= true
+command = "alacritty --class dropterm-top"
+animation = "fromTop"
+unfocus = "hide"
+size = "50% 50%"
+lazy = true
 
 [scratchpads.drop-term]
-  command= "alacritty --class dropterm"
-  animation= "fromBottom"
-  unfocus= "hide"
-  size= "50% 50%"
-  lazy= true
+command = "alacritty --class dropterm"
+animation = "fromBottom"
+unfocus = "hide"
+size = "50% 50%"
+lazy = true
+
+# [scratchpads.telegramchrome]
+# command = "chromium class=whatsapp --app=https://web.telegram.org/a/"
+# position = "25% 20%"
+# size = "50% 60%"
+# lazy = true
+# excludes = ["telegram"]
 
 [scratchpads.whatsapp]
-  command= "chromium --app=https://web.whatsapp.com/"
-  position= "25% 20%"
-  size= "50% 60%"
-  lazy= true
+command = "chromium class=whatsapp --app=https://web.whatsapp.com/"
+position = "25% 20%"
+size = "50% 60%"
+lazy = true
+excludes = ["telegram"]
 
 [scratchpads.telegram]
-  command= "telegram-desktop"
-  # position= "25% 20%"
-  animation = "fromBottom"
-  size= "50% 60%"
-  class= "org.telegram.desktop"
-  # class_match=true
-  lazy= true
+command = "telegram-desktop"
+# position= "25% 20%"
+# animation = "fromBottom"
+position = "25% 20%"
+size = "50% 60%"
+class = "org.telegram.desktop"
+# class_match=true
+lazy = true
+excludes = ["whatsapp"]
 
 [scratchpads.volume]
-  command= "pavucontrol"
-  animation= "fromRight"
-  lazy= true
-  size= "15% 25%"
+command = "pavucontrol"
+animation = "fromRight"
+lazy = true
+size = "15% 25%"
 
 [scratchpads.discord]
-  command= "discord"
-  size= "50% 60%"
-  animation=""
-  class= "discord"
-  class_match=true
-  lazy= true
-
-
+command = "discord"
+size = "50% 60%"
+animation = ""
+class = "discord"
+class_match = true
+lazy = true
