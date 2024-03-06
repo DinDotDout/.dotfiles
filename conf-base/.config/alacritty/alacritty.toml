@@ -76,11 +76,6 @@ key = "Minus"
 mods = "Control"
 
 [[keyboard.bindings]]
-action = "ToggleFullscreen"
-key = "F11"
-mods = "None"
-
-[[keyboard.bindings]]
 action = "Paste"
 key = "Paste"
 mods = "None"
@@ -90,39 +85,38 @@ action = "Copy"
 key = "Copy"
 mods = "None"
 
-[[keyboard.bindings]]
-action = "ClearLogNotice"
-key = "L"
-mods = "Control"
+# [[keyboard.bindings]]
+# action = "ClearLogNotice"
+# mods = "Control"
+# key = "L"
 
 [[keyboard.bindings]]
 chars = "\f"
-key = "L"
 mods = "Control"
+key = "L"
 
-[[keyboard.bindings]]
-action = "ScrollPageUp"
-key = "PageUp"
-mode = "~Alt"
-mods = "None"
-
-[[keyboard.bindings]]
-action = "ScrollPageDown"
-key = "PageDown"
-mode = "~Alt"
-mods = "None"
-
-[[keyboard.bindings]]
-action = "ScrollToTop"
-key = "Home"
-mode = "~Alt"
-mods = "Shift"
+# [[keyboard.bindings]]
+# action = "ScrollPageUp"
+# key = "PageUp"
+# mode = "~Alt"
+# mods = "None"
+#
+# [[keyboard.bindings]]
+# action = "ScrollPageDown"
+# key = "PageDown"
+# mode = "~Alt"
+# mods = "None"
+#
+# [[keyboard.bindings]]
+# action = "ScrollToTop"
+# key = "Home"
+# mode = "~Alt"
+# mods = "Shift"
 
 [scrolling]
 history = 5000
 
 [window]
-# opacity = 0.0
 opacity = 0.9
 title = "Alacritty"
 
