@@ -2,7 +2,7 @@
     // Position TOP
     "position": "top",
     "margin-top": 6,
-    "margin-bottom": -7,
+    "margin-bottom": -4,
 
     // Position BOTTOM
     // "position": "bottom",
@@ -21,6 +21,7 @@
     // Modules Left
     "modules-left": [
         "custom/appmenu",
+        "clock",
         "tray",
         "wlr/taskbar",
         "hyprland/window"
@@ -38,7 +39,6 @@
         "battery",
         "group/hardware",
         "network",
-        "clock",
         "custom/exit"
     ],
 
