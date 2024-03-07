@@ -43,7 +43,7 @@
   },
   // Hyprland Window
   "hyprland/window": {
-    "max-length": 50,
+    "max-length": 30,
     "rewrite": {
       "(.*) — Mozilla Firefox": " $1",
       "Mozilla Firefox": " New Tab",
@@ -98,7 +98,7 @@
   },
   // Clock
   "clock": {
-    // "timezone": "America/New_York",
+    // "timezone": "Europe/Madrid",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
