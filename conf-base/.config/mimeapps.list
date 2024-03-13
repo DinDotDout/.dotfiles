@@ -8,4 +8,9 @@ image/jpeg=feh.desktop
 image/png=feh.desktop
 image/gif=feh.desktop
 image/bmp=feh.desktop
+model/lst=/usr/share/applications/glslViewer.desktop
+model/ply=/usr/share/applications/glslViewer.desktop
+model/obj=/usr/share/applications/glslViewer.desktop
+model/gltf-binary=/usr/share/applications/glslViewer.desktop
+model/gltf+json=/usr/share/applications/glslViewer.desktop
 
