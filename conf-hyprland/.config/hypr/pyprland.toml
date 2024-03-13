@@ -11,14 +11,14 @@ size = "60% 60%"
 lazy = true
 
 [scratchpads.up-term]
-command = "alacritty --class dropterm-top"
+command = "wezterm start --class dropterm-top"
 animation = "fromTop"
 unfocus = "hide"
 size = "50% 50%"
 lazy = true
 
 [scratchpads.drop-term]
-command = "alacritty --class dropterm"
+command = "wezterm start --class dropterm"
 animation = "fromBottom"
 unfocus = "hide"
 size = "50% 50%"
