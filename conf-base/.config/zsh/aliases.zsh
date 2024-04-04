@@ -36,15 +36,14 @@ alias \
   g="git" \
   yz="yazi" \
 
+alias gnv='nvim --listen ~/.cache/nvim/godot.pipe'
 alias \
   nv='nvim' \
-  gnv="nvim --listen /tmp/nvimsocket" \
   conf="yazi $HOME/.config/" \
   dotf="yazi $HOME/.dotfiles/" \
-  # conf="ranger $HOME/.config/" \
-  # dotf="ranger $HOME/.dotfiles/" \
   roblox="cd /home/joan/.var/app/io.github.vinegarhq.Vinegar/data/vinegar/prefix/dosdevices/c:/users/joan/Documents" \
   studio="flatpak run io.github.vinegarhq.Vinegar studio"
+
 alias gpt="com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1' &"
 alias scripts="cd ~/.local/bin/"
 
