@@ -16,7 +16,7 @@ fi
 
 # If the application is not running, start it
 if ! hyprctl clients | grep -q "$scratch_name"; then
-    killall "$app"
+    killall -9 "$app"
 	# hyprctl dispatch exec "$app"
 	# echo "send"
 else # If the application is running, toggle the scratch_name
