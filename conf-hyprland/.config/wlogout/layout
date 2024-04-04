@@ -1,6 +1,6 @@
 {
     "label" : "lock",
-    "action" : "$HOME/.dotfiles/wm_scripts/swaylock.sh",
+    "action" : "sleep 0.7; $HOME/.dotfiles/wm_scripts/swaylock.sh",
     "text" : "Lock",
     "keybind" : "l"
 }
@@ -24,13 +24,13 @@
 }
 {
     "label" : "suspend",
-    "action" : "$HOME/.dotfiles/wm_scripts/swaylock.sh && systemctl suspend",
+    "action" : "sleep 0.7; $HOME/.dotfiles/wm_scripts/swaylock.sh && systemctl suspend",
     "text" : "Suspend",
     "keybind" : "u"
 }
 {
     "label" : "reboot",
-    "action" : "sleep 1; systemctl reboot",
+    "action" : "systemctl reboot",
     "text" : "Reboot",
     "keybind" : "r"
 }
