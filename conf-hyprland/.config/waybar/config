@@ -1,8 +1,7 @@
 {
-    // Position TOP
     "position": "top",
-    "margin-top": 6,
-    "margin-bottom": -4,
+    "margin-top": 4,
+    "margin-bottom": 0,
 
     // Position BOTTOM
     // "position": "bottom",
@@ -17,8 +16,6 @@
 
     // Load Modules
     "include": ["~/.config/waybar/modules.json"],
-
-    // Modules Left
     "modules-left": [
         "custom/appmenu",
         "clock",
@@ -27,12 +24,10 @@
         "hyprland/window"
     ],
 
-    // Modules Center
     "modules-center": [
         "hyprland/workspaces"
     ],
 
-    // Modules Right
     "modules-right": [
         "custom/audio_idle_inhibitor",
         "pulseaudio",
