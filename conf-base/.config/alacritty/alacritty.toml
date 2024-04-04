@@ -40,6 +40,22 @@ style = "Regular"
 x = 0
 y = 0
 
+[scrolling]
+history = 5000
+
+[window]
+opacity = 0.95
+# opacity = 1.0
+title = "Alacritty"
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 12
+y = 12
+
 [[keyboard.bindings]]
 action = "Paste"
 key = "V"
@@ -113,17 +129,3 @@ key = "L"
 # mode = "~Alt"
 # mods = "Shift"
 
-[scrolling]
-history = 5000
-
-[window]
-opacity = 0.9
-title = "Alacritty"
-
-[window.class]
-general = "Alacritty"
-instance = "Alacritty"
-
-[window.padding]
-x = 12
-y = 12
