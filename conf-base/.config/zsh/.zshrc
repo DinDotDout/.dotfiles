@@ -4,12 +4,13 @@
 # Keep in case we remove plugin manager
 # [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliases" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliases"
 # [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/bindings" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/bindings"
-plug "$HOME/.config/zsh/aliases.zsh"
-plug "$HOME/.config/zsh/bindings.zsh"
 
 plug "zsh-users/zsh-autosuggestions"
-plug "zap-zsh/supercharge"
+plug "zap-zsh/supercharge" #  Some okay defaults for zsh (set before own aliases)
 plug "zsh-users/zsh-syntax-highlighting"
+
+plug "$HOME/.config/zsh/aliases.zsh"
+plug "$HOME/.config/zsh/bindings.zsh"
 
 # Fuzzyfinding stuff
 source /usr/share/fzf/key-bindings.zsh

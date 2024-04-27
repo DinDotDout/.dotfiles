@@ -29,6 +29,9 @@ bindkey -s '^o' '^urangercd\n'
 bindkey -s '^n' 'nvim .\n'
 bindkey -s '^y' 'yazi\n'
 bindkey -s '^f' "tmux-sessionizer\n"
+# bindkey -s '^f' "source tmux-sessionizer\n"
+# bindkey -s '^f' "source project-cd\n"
+
 
 # Shell-GPT integration ZSH v0.1
 # _sgpt_zsh() {
