@@ -1,26 +1,25 @@
 #!/usr/bin/env bash
-# From the primeagen <3
-
-if [[ $# -eq 1 ]]; then
-	selected=$1
+if [[ $# -eq 1 && $1 == "--no-database" ]]; then
+    SELECTED=$(find ~/Documents/projects ~/Documents/projects/tests ~/Documents/projects/graphics ~/ -mindepth 1 -maxdepth 1 -type d | fzf --reverse)
 else
-	selected=$(find ~/Documents/projects ~/Documents/projects/tests ~/Documents/projects/graphics ~/ -mindepth 1 -maxdepth 1 -type d | fzf --reverse)
+    # NOTE: tiebreak preserves zoxide order.
+    SELECTED=$(zoxide query -l | fzf --tiebreak=index --reverse)
 fi
 
-if [[ -z $selected ]]; then
-	exit 0
+if [ -z "$SELECTED" ]; then
+    exit 0
 fi
 
-selected_name=$(basename "$selected" | tr . _)
-tmux_running=$(pgrep tmux)
+SESSION_NAME=$(basename "$SELECTED" | tr . _)
 
-if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
-	tmux new-session -s $selected_name -c $selected
-	exit 0
+# Create session.
+if ! tmux has-session -t=$SESSION_NAME 2>/dev/null; then
+    tmux new-session -ds $SESSION_NAME -c $SELECTED
 fi
 
-if ! tmux has-session -t=$selected_name 2>/dev/null; then
-	tmux new-session -ds $selected_name -c $selected
+zoxide add $SELECTED # Update zoxide database.
+if [[ -z $TMUX ]]; then
+    tmux attach -t $SESSION_NAME
+else
+    tmux switch-client -t $SESSION_NAME
 fi
-
-tmux switch-client -t $selected_name
