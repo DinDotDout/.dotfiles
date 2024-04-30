@@ -4,8 +4,12 @@ plugins = ["scratchpads", "workspaces_follow_focus"]
 [scratchpads.gptbing]
 command = "flatpak run com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1'"
 animation = "fromTop"
-class_match = true
-class = "Microsoft-edge"
+multi = "false"
+# match_by = "class"
+# class = "Microsoft-edge"
+
+match_by = "title"
+title = "Copilot with GPT-4"
 margin = 70
 size = "60% 60%"
 lazy = true
@@ -47,7 +51,10 @@ command = "telegram-desktop"
 # animation = "fromBottom"
 position = "25% 20%"
 size = "50% 60%"
-class = "org.telegram.desktop"
+match_by = "initialClass"
+initialClass = "org.telegram.desktop"
+multi = "false"
+
 # class_match=true
 lazy = true
 excludes = ["whatsapp"]
@@ -62,6 +69,7 @@ size = "15% 25%"
 command = "discord"
 size = "50% 60%"
 animation = ""
+match_by = "class"
 class = "discord"
-class_match = true
+# class_match = true
 lazy = true
