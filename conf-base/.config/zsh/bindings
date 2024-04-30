@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Jump words with ctrl arrowkeys
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+function yazycd() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+bindkey -s '^o' '^uyazycd\n'
+bindkey -s '^n' 'nvim .\n'
+bindkey -s '^y' 'yazi\n'
+bindkey -s '^f' "tmux-sessionizer\n"
+bindkey -s '^b' "tmux-sessionizer --no-database\n"
