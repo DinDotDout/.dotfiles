@@ -3,7 +3,7 @@ WAL_FLAGS="--backend colorz -qt -i"
 
 function load_wallpaper {
 	if [ -f ~/.cache/current_wallpaper.jpg ]; then
-		wal $WAL_FLAGS~/.cache/current_wallpaper.jpg
+		wal $WAL_FLAGS ~/.cache/current_wallpaper.jpg
 	else
 		wal $WAL_FLAGS ~/wallpaper/
 	fi
