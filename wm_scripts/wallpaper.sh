@@ -1,5 +1,5 @@
 #!/bin/bash
-WAL_FLAGS="--backend colorz -qt -i"
+WAL_FLAGS="--backend colorz  -qt -i"
 
 function load_wallpaper {
 	if [ -f ~/.cache/current_wallpaper.jpg ]; then
@@ -23,7 +23,8 @@ function select_wallpaper {
 }
 
 function random_wallpaper {
-	wal --recursive $WAL_FLAGS ~/wallpaper/
+	# wal --recursive $WAL_FLAGS ~/wallpaper/ # Only for pywal16
+	wal $WAL_FLAGS ~/wallpaper/
 }
 
 function set_new_wallpaper {
