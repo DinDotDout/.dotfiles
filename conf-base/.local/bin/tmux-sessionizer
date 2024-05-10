@@ -11,10 +11,14 @@ if [ -z "$SELECTED" ]; then
 fi
 
 SESSION_NAME=$(basename "$SELECTED" | tr . _)
-
 # Create session.
 if ! tmux has-session -t=$SESSION_NAME 2>/dev/null; then
     tmux new-session -ds $SESSION_NAME -c $SELECTED
+    if [ -f "$SELECTED/project.godot" ]; then
+        tmux send-keys -t $SESSION_NAME 'gnv .' C-m
+    else
+        tmux send-keys -t $SESSION_NAME 'nvim .' C-m
+    fi
 fi
 
 zoxide add $SELECTED # Update zoxide database.
