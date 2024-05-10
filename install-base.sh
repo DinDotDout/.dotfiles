@@ -19,7 +19,7 @@ add_tty_login() {
 
 install_pacman_pcks() {
 	# to watch timeshift and auto mkconf
-	pacman_pcks=(dunst otf-font-awesome ttf-roboto-mono-nerd ttf-hack-nerd noto-fonts-cjk inotify-tools kitty yazi qt5ct zoxide)
+	pacman_pcks=(python-pywal dunst otf-font-awesome ttf-roboto-mono-nerd ttf-hack-nerd noto-fonts-cjk inotify-tools kitty yazi qt5ct zoxide syncthing)
 	sudo pacman --noconfirm --needed -S "${pacman_pcks[@]}" || {
 		echo 'Failed to install pacman packages.'
 		exit 1
@@ -52,7 +52,8 @@ install_paru_and_aur_pcks() {
 		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha nodejs
 		protonup-qt timeshift zram-generator preload pywal rofi-calc redshift-wayland-git
 		sddm-sugar-candy-git autofirma-bin vlc flatpak libreoffice-still pokemon-colorscripts-git
-		pywal-16-colors python-pywalfox colorz walogram fzf
+		python-pywalfox colorz walogram fzf
+        # pywal-16-colors
 	)
 
 	paru --noconfirm --needed -S "${paru_packages[@]}" || {
@@ -170,6 +171,7 @@ main() {
 	welcome_message
 	add_tty_login
 	install_pacman_pcks
+    systemctl --user enable syncthing.service # Enable syncthing
     add_tmux
 	install_paru_and_aur_pcks
 	configure_timeshift

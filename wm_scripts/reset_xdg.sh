@@ -15,3 +15,4 @@ sleep 1
 sleep 2
 
 /usr/lib/xdg-desktop-portal &
+sleep 0.3
