@@ -5,11 +5,10 @@ plugins = ["scratchpads", "workspaces_follow_focus"]
 command = "flatpak run com.microsoft.Edge --app='https://www.bing.com/search?form=NTPCHB&q=Bing+AI&showconv=1'"
 animation = "fromTop"
 multi = "false"
-# match_by = "class"
-# class = "Microsoft-edge"
-
 match_by = "title"
-title = "Copilot with GPT-4"
+# title = "Copilot with GPT-4"
+title = "Microsoft Copilot in Bing"
+# class = "Microsoft-edge"
 margin = 70
 size = "60% 60%"
 lazy = true
@@ -43,7 +42,7 @@ command = "chromium class=whatsapp --app=https://web.whatsapp.com/"
 position = "25% 20%"
 size = "50% 60%"
 lazy = true
-excludes = ["telegram"]
+# excludes = ["telegram"]
 
 [scratchpads.telegram]
 command = "telegram-desktop"
@@ -54,10 +53,9 @@ size = "50% 60%"
 match_by = "initialClass"
 initialClass = "org.telegram.desktop"
 multi = "false"
-
 # class_match=true
 lazy = true
-excludes = ["whatsapp"]
+# excludes = ["whatsapp"]
 
 [scratchpads.volume]
 command = "pavucontrol"
@@ -65,11 +63,12 @@ animation = "fromRight"
 lazy = true
 size = "15% 25%"
 
-[scratchpads.discord]
-command = "discord"
-size = "50% 60%"
-animation = ""
-match_by = "class"
-class = "discord"
-# class_match = true
-lazy = true
+# [scratchpads.discord]
+# # command = "discord"
+# command = "chromium class=whatsapp --app=https://discord.com/app"
+# size = "50% 60%"
+# animation = ""
+# match_by = "class"
+# class = "discord"
+# # class_match = true
+# lazy = true
