@@ -1,19 +1,20 @@
 ignore-empty-password
 font="Fira Sans Semibold"
 
-#clock
-#timestr=%R
-#datestr=%a, %e of %B
+clock
+timestr=%R
+datestr=%a, %e of %B
 
+# Currently setting image from command
 # Add current screenshot as wallpaper or use stored wallpaper
 # screenshots
-image=~/.cache/current_wallpaper.jpg
+#image=~/.cache/current_wallpaper.jpg
 
 # Fade in time
-fade-in=1
+fade-in=.3
 
 # Effect for background
-#effect-blur=10x3
+effect-blur=10x3
 
 # Show/Hide indicator circle
 indicator

@@ -7,6 +7,7 @@ keyh_log=$color6
 
 # Apply the colors to swaylock
 swaylock --daemonize \
+    -i $wallpaper \
 	--text-color=$text \
 	--key-hl-color=$keyh_log \
 	--ring-color=$ring \

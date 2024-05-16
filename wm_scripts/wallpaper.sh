@@ -1,9 +1,11 @@
 #!/bin/bash
 WAL_FLAGS="--backend colorz  -qt -i"
-
+cache_file="$HOME/.cache/current_wallpaper.txt"
 function load_wallpaper {
-	if [ -f ~/.cache/current_wallpaper.jpg ]; then
-		wal $WAL_FLAGS ~/.cache/current_wallpaper.jpg
+    # NOTE: By sourcing colors.sh we could already get the last wallpaper
+    if [ -f "$cache_file" ]; then
+        wallpaper=$(cat "$cache_file")
+        wal $WAL_FLAGS "$wallpaper"
 	else
 		wal $WAL_FLAGS ~/wallpaper/
 	fi
@@ -29,7 +31,7 @@ function random_wallpaper {
 
 function set_new_wallpaper {
 	source "$HOME/.cache/wal/colors.sh" # Import colors and wallpaper
-	cp "$wallpaper" ~/.cache/current_wallpaper.jpg
+    echo "$wallpaper" > "$cache_file"
 	transition_type="wipe"
 	swww img "$wallpaper" \
 		--transition-bezier 0.4,1.10,0.9,0.5 \
