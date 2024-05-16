@@ -7,7 +7,7 @@ plug "zsh-users/zsh-syntax-highlighting"
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliases" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/aliases"
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/bindings" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/bindings"
-
+[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/vimzsh" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/zsh/vimzsh"
 # FZF
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
