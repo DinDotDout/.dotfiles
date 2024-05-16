@@ -22,7 +22,7 @@ family = "RobotoMono Nerd Font"
 style = "Italic"
 
 [cursor.style]
-shape = "Block"
+shape = "Beam"
 blinking = "On"
 # blink_interval = 750
 # [cursor.vi_mode_style]
