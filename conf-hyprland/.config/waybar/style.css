@@ -78,6 +78,12 @@ window#waybar > box {
   opacity: 1;
 }
 
+#workspaces button.urgent{
+  box-shadow: none;
+  color: @color2;
+  opacity: 1;
+}
+
 #workspaces button:hover {
   color: @foreground;
   margin: 0px 0px;
