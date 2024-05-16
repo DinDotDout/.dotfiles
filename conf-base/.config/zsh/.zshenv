@@ -10,7 +10,10 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_STATE_HOME="$HOME/.local/state"
 export XDG_CACHE_HOME="$HOME/.cache"
 export VISUAL="nvim"
-export MANPAGER="less -R --use-color -Dd+r -Du+b"
+
+# export MANPAGER="less -R --use-color -Dd+r -Du+b"
+export MANROFFOPT='-c' # Fix man pages with colors
+export MANPAGER="sh -c 'col -bx | bat --theme gruvbox-dark -l man -p'" # Specify theme as base16 is plain
 
 # default apps
 export TERMINAL="kitty"
