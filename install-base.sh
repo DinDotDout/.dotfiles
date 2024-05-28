@@ -19,7 +19,7 @@ add_tty_login() {
 
 install_pacman_pcks() {
 	# to watch timeshift and auto mkconf
-	pacman_pcks=(python-pywal dunst otf-font-awesome ttf-roboto-mono-nerd ttf-hack-nerd noto-fonts-cjk inotify-tools yazi qt5ct zoxide syncthing)
+	pacman_pcks=(python-pywal dunst otf-font-awesome ttf-roboto-mono-nerd ttf-hack-nerd noto-fonts-cjk inotify-tools yazi qt5ct zoxide syncthing tree-sitter tree-sitter-cli)
 	sudo pacman --noconfirm --needed -S "${pacman_pcks[@]}" || {
 		echo 'Failed to install pacman packages.'
 		exit 1
