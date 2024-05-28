@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 if [[ $# -eq 1 && $1 == "--no-database" ]]; then
-    SELECTED=$(find ~/Documents/projects ~/Documents/projects/tests ~/Documents/projects/graphics ~/ -mindepth 1 -maxdepth 1 -type d | fzf --reverse)
+    SELECTED=$(find ~/Documents/projects -type d -name ".git" -prune -print | sed 's/\/.git$//' | fzf --reverse)
 else
     # NOTE: tiebreak preserves zoxide order.
     SELECTED=$(zoxide query -l | fzf --tiebreak=index --reverse)

@@ -1,6 +1,8 @@
 #!/bin/bash
 WAL_FLAGS="--backend colorz  -qt -i"
 cache_file="$HOME/.cache/current_wallpaper.txt"
+blurred_wallpaper="$HOME/.cache/blurred_wallpaper.png"
+blur="10x10"
 function load_wallpaper {
     # NOTE: By sourcing colors.sh we could already get the last wallpaper
     if [ -f "$cache_file" ]; then
@@ -32,12 +34,16 @@ function random_wallpaper {
 function set_new_wallpaper {
 	source "$HOME/.cache/wal/colors.sh" # Import colors and wallpaper
     echo "$wallpaper" > "$cache_file"
+
 	transition_type="wipe"
 	swww img "$wallpaper" \
 		--transition-bezier 0.4,1.10,0.9,0.5 \
 		--transition-type=$transition_type \
 		--transition-duration=1.0 \
 		--transition-fps=60
+
+    # magick $wallpaper -resize 75% $blurred_wallpaper
+    # magick $blurred_wallpaper -blur $blur $blurred_wallpaper
 }
 
 # Update telegram and firefox themes
@@ -58,7 +64,7 @@ function update_themes {
 	dunst -conf ~/.cache/wal/colors-dunstrc &
 }
 
-function send_notification {
+function notify_changed {
 	newwall=$(echo $wallpaper | sed "s|$HOME/wallpaper/||g")
 	notify-send "Colors and Wallpaper updated" "with image $newwall"
 	echo "Done."
@@ -79,4 +85,8 @@ esac
 echo "Changing theme..."
 set_new_wallpaper
 update_themes
-send_notification
+if [ "$1" != "init" ]
+then
+    magick $wallpaper -resize 75% -blur $blur $blurred_wallpaper
+fi
+notify_changed
