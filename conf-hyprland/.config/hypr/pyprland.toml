@@ -6,8 +6,8 @@ command = "flatpak run com.microsoft.Edge --app='https://www.bing.com/search?for
 animation = "fromTop"
 multi = "false"
 match_by = "title"
-# title = "Copilot with GPT-4"
-title = "Microsoft Copilot in Bing"
+title = "Copilot with GPT-4"
+# title = "Microsoft Copilot in Bing"
 # class = "Microsoft-edge"
 margin = 70
 size = "60% 60%"
