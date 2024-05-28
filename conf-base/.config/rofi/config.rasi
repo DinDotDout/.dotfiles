@@ -24,11 +24,11 @@ configuration {
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
     window-format:              "{w} · {c} · {t}";
-    
 }
 
 /* ---- Load pywal colors (custom wal template) ---- */
 @import "~/.cache/wal/colors-rofi-pywal"
+@import "~/.cache/current_wallpaper.rasi"
 
 /* ---- Window ---- */
 window {
@@ -58,7 +58,6 @@ mainbox {
     spacing:                      0px;
     margin:                       0px;
     background-color:             @background;
-    background-image:             url("~/.cache/current_wallpaper.jpg", height);
     children:                     ["imagebox","listbox"];
 }
 

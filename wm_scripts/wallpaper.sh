@@ -1,6 +1,7 @@
 #!/bin/bash
 WAL_FLAGS="--backend colorz  -qt -i"
 cache_file="$HOME/.cache/current_wallpaper.txt"
+rofi_cache_file="$HOME/.cache/current_wallpaper.rasi"
 blurred_wallpaper="$HOME/.cache/blurred_wallpaper.png"
 blur="10x10"
 function load_wallpaper {
@@ -34,6 +35,9 @@ function random_wallpaper {
 function set_new_wallpaper {
 	source "$HOME/.cache/wal/colors.sh" # Import colors and wallpaper
     echo "$wallpaper" > "$cache_file"
+    # * { current-image: url("/home/joan/wallpaper/default.jpg", height); }
+    echo "mainbox { background-image: url(\"$wallpaper\", height); }" > "$rofi_cache_file"
+
 
 	transition_type="wipe"
 	swww img "$wallpaper" \
