@@ -12,8 +12,10 @@ function yazycd() {
 	fi
 	rm -f -- "$tmp"
 }
+
 bindkey -s '^o' '^uyazycd\n'
-bindkey -s '^n' 'nvim .\n'
-bindkey -s '^y' 'yazi\n'
-bindkey -s '^f' "tmux-sessionizer\n"
-bindkey -s '^b' "tmux-sessionizer --no-database\n"
+bindkey -s '^n' '^unvim .\n'
+bindkey -s '^y' '^uyazi\n'
+bindkey -s '^f' "^utmux-sessionizer\n"
+bindkey -s '^b' "^utmux-sessionizer --no-database\n"
+bindkey -s '^x' '^usource $ZSHRC\n'
