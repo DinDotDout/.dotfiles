@@ -2,8 +2,9 @@
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:${$(find ~/.local/bin -maxdepth 1 -type d -printf %p:)%%:}"
 
+# Removed in favor of using zoxide to avoid poluting the completion space
 # Quick path access
-export CDPATH=.:"$HOME/Documents/projects/":"$HOME/.config/"
+# export CDPATH=.:"$HOME/Documents/projects/":"$HOME/.config/"
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
