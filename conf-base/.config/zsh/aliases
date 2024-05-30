@@ -65,7 +65,7 @@ abbrevs=(
     "gs" "git status"
     "gp" "git push -u origin HEAD"
     "gc" "git commit -m '|cursor|'"
-    "test" "echo |cursor| aaa"
+    "ghc" "gh repo create --private --remote=origin source . " # Create repo and set-url
 )
 
 # Some might not make a lot of sense as alias but meh
