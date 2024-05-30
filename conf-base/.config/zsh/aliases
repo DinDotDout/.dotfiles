@@ -15,7 +15,7 @@ alias \
     rm="rm -vI" \
     bc="bc -ql" \
     rsync="rsync -vrPlu" \
-    mkd="mkdir -pv" \
+    mkd="mkdir -pv"
     # yt="yt-dlp --embed-metadata -i" \
     # yta="yt -x -f bestaudio/best" \
     # ytt="yt --skip-download --write-thumbnail" \
@@ -54,3 +54,38 @@ alias scripts="cd ~/.local/bin/"
 # Winget dotfile change location
 alias wget='wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 
+# Special aliases
+typeset -A abbrevs
+
+abbrevs=(
+    "..." "../.."
+    "...." "../../.."
+    "gra" "git remote add origin git@github.com:DinDotDout/|cursor|.git"
+    "grs" "git remote set-url origin git@github.com:DinDotDout/|cursor|.git"
+    "gs" "git status"
+    "gp" "git push -u origin HEAD"
+    "gc" "git commit -m '|cursor|'"
+    "test" "echo |cursor| aaa"
+)
+
+# Some might not make a lot of sense as alias but meh
+for abbr in ${(k)abbrevs}; do
+   alias -g $abbr="${abbrevs[$abbr]//|cursor|/}"
+done
+
+# Expand abbreviations and place cursor
+expand-abbrev() {
+    local MATCH=${LBUFFER##* }
+    LBUFFER=${LBUFFER%%$MATCH}
+    local expansion=${abbrevs[$MATCH]:-$MATCH}
+
+    if [[ $expansion =~ "(.*)\|cursor\|(.*)" ]]; then
+        LBUFFER+="${match[1]}${match[2]}"
+        CURSOR=$((${#LBUFFER} - ${#match[2]}))
+    else
+        LBUFFER+=$expansion
+    fi
+}
+zle -N expand-abbrev
+
+bindkey "^ " expand-abbrev
