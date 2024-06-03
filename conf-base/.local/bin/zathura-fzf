@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+SELECTED=$(find ~/Documents/ -type f -name "*.pdf" | fzf --reverse)
+
+if [ -z "$SELECTED" ]; then
+    exit 0
+fi
+
+zathura "$SELECTED" &
