@@ -19,3 +19,4 @@ bindkey -s '^y' '^uyazi\n'
 bindkey -s '^f' "^utmux-sessionizer\n"
 bindkey -s '^b' "^utmux-sessionizer --no-database\n"
 bindkey -s '^x' '^usource $ZSHRC\n'
+bindkey -s '^p' '^uzathura-fzf\n'
