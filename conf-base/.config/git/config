@@ -1,0 +1,7 @@
+[user]
+	email = 60853685+DinDotDout@users.noreply.github.com
+	name = DinDotDout
+[init]
+	defaultBranch = main
+[rerere]
+	enabled = true
