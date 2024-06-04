@@ -21,7 +21,12 @@ install_pacman_pcks() {
 	# to watch timeshift and auto mkconf
 	pacman_pcks=(python-pywal dunst otf-font-awesome ttf-roboto-mono-nerd ttf-hack-nerd noto-fonts-cjk inotify-tools yazi qt5ct zoxide syncthing 
         tree-sitter tree-sitter-cli # neovim
+        github-cli
+        calc
+        obsidian syncthing
+        nwg-look # kde tool for cursor/icon setting
     )
+    gh config set git_protocol ssh
 	sudo pacman --noconfirm --needed -S "${pacman_pcks[@]}" || {
 		echo 'Failed to install pacman packages.'
 		exit 1
@@ -39,6 +44,7 @@ add_tmux() {
     echo "DONE!"
     mkdir -p $HOME/.config/tmux/plugins # Just in case
     git clone https://github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins/tpm
+    bash $HOME/.config/tmux/plugins/tpm/scripts/install_plugins.sh
 }
 
 install_paru_and_aur_pcks() {
