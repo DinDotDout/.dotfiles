@@ -10,6 +10,7 @@ title = "Copilot with GPT-4"
 # title = "Microsoft Copilot in Bing"
 # class = "Microsoft-edge"
 margin = 70
+position = "20% 50px"
 size = "60% 60%"
 lazy = true
 
@@ -19,6 +20,8 @@ lazy = true
 command = "alacritty --class dropterm-top"
 animation = "fromTop"
 unfocus = "hide"
+position = "25% 45px"
+margin = 45
 size = "50% 50%"
 lazy = true
 
@@ -27,6 +30,7 @@ lazy = true
 command = "alacritty --class dropterm"
 animation = "fromBottom"
 unfocus = "hide"
+position = "25% 48%"
 size = "50% 50%"
 lazy = true
 
