@@ -1,7 +1,17 @@
+add_newline = false
+# right_format = """$character"""
+right_format = """$all"""
+format = """$directory$character"""
+# format = """$character"""
 [character]
-success_symbol = "[>](bold green)"
-error_symbol = "[x](bold red)"
-vimcmd_symbol = "[<](bold green)"
+# success_symbol = "[>](bold green)"
+# error_symbol = "[](bold red)"
+error_symbol = "[](bold cyan)"
+vimcmd_symbol = "[](bold green)"
+
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
 
 [git_commit]
 tag_symbol = " tag "
