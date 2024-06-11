@@ -20,7 +20,10 @@ add_tty_login() {
 install_pacman_pcks() {
 	# to watch timeshift and auto mkconf
 	pacman_pcks=(python-pywal dunst otf-font-awesome ttf-roboto-mono-nerd ttf-hack-nerd noto-fonts-cjk inotify-tools yazi qt5ct zoxide syncthing 
+        gammastep # redshift wayland
         tree-sitter tree-sitter-cli # neovim
+        rofi-wayland # app launcher
+        discord
         github-cli
         calc
         obsidian syncthing
@@ -56,7 +59,7 @@ install_paru_and_aur_pcks() {
 	echo "DONE!"
 
 	echo "Installing Paru pckgs!"
-	paru_packages=(rofi-lbonn-wayland webcord neovim-remote stow starship noto-fonts-emoji
+	paru_packages=(neovim-remote stow starship noto-fonts-emoji
 		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha nodejs
 		protonup-qt timeshift zram-generator preload pywal rofi-calc redshift-wayland-git
 		sddm-sugar-candy-git autofirma-bin vlc flatpak libreoffice-still pokemon-colorscripts-git
@@ -76,11 +79,18 @@ install_paru_and_aur_pcks() {
 
 configure_timeshift() {
 	echo "Configuring timeshift"
-	sudo sed -i 's/"include_btrfs_home_for_backup": "false"/"include_btrfs_home_for_backup": "true"/g' /etc/timeshift/timeshift.json
-	sudo sed -i 's/"schedule_weekly": "false"/"schedule_weekly": "true"/g' /etc/timeshift/timeshift.json
-	sudo sed -i 's/"schedule_monthly": "false"/"schedule_monthly": "true"/g' /etc/timeshift/timeshift.json
-	sudo sed -i 's/"count_monthly": "[0-9]*"/"count_monthly": "6"/g' /etc/timeshift/timeshift.json
-	sudo sed -i 's/"count_weekly": "[0-9]*"/"count_weekly": "4"/g' /etc/timeshift/timeshift.json
+	# sudo sed -i 's/"include_btrfs_home_for_backup": "false"/"include_btrfs_home_for_backup": "true"/g' /etc/timeshift/timeshift.json
+	# sudo sed -i 's/"schedule_weekly": "false"/"schedule_weekly": "true"/g' /etc/timeshift/timeshift.json
+	# sudo sed -i 's/"schedule_monthly": "false"/"schedule_monthly": "true"/g' /etc/timeshift/timeshift.json
+	# sudo sed -i 's/"count_monthly": "[0-9]*"/"count_monthly": "6"/g' /etc/timeshift/timeshift.json
+	# sudo sed -i 's/"count_weekly": "[0-9]*"/"count_weekly": "4"/g' /etc/timeshift/timeshift.json
+
+    sudo sed -i -e 's/"include_btrfs_home_for_backup": "false"/"include_btrfs_home_for_backup": "true"/g' \
+           -e 's/"schedule_weekly": "false"/"schedule_weekly": "true"/g' \
+           -e 's/"schedule_monthly": "false"/"schedule_monthly": "true"/g' \
+           -e 's/"count_monthly": "[0-9]*"/"count_monthly": "6"/g' \
+           -e 's/"count_weekly": "[0-9]*"/"count_weekly": "4"/g' /etc/timeshift/timeshift.json
+
 
 	# Make grub track and update on timeshift snapshots
 	sudo sed -i 's|ExecStart=/usr/bin/grub-btrfsd --syslog /.snapshots|ExecStart=/usr/bin/grub-btrfsd --syslog --timeshift-auto|' /etc/systemd/system/grub-btrfsd.service

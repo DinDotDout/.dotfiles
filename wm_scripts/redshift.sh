@@ -1,11 +1,10 @@
 #!/bin/bash
 id=1
-
-# Check if redshift is running
-if pgrep -x "redshift" >/dev/null; then
-	pkill -x "redshift"
-	notify-send -r "$id" "Redshift   "
+# Check if gammastep is running
+if pgrep -x "gammastep" >/dev/null; then
+	pkill -x "gammastep"
+	notify-send -r "$id" "Gammastep   "
 else
-	redshift -O 5000k &
-	notify-send -r "$id" "Redshift   "
+	gammastep -vO 5000k &
+	notify-send -r "$id" "Gammastep   "
 fi
