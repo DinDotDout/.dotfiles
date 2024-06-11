@@ -20,3 +20,9 @@ bindkey -s '^f' "^utmux-sessionizer\n"
 bindkey -s '^b' "^utmux-sessionizer --no-database\n"
 bindkey -s '^x' '^usource $ZSHRC\n'
 bindkey -s '^p' '^uzathura-fzf\n'
+
+bindkey -s '^x' '^usource $ZSHRC\n'
+bindkey -M menuselect '?' history-incremental-search-forward
+bindkey -M menuselect '/' history-incremental-search-backward
+bindkey '^H' backward-kill-word # Ctrl + Backspace to delete a whole word.
+
