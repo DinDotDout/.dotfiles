@@ -1,16 +1,18 @@
+[Added Associations]
+image/gif=imv-2.desktop;
+
 [Default Applications]
-x-scheme-handler/https=firefox.desktop
-x-scheme-handler/http=firefox.desktop
 application/pdf=org.pwmt.zathura-pdf-mupdf.desktop
-text/plain=nvim.desktop
 application/x-ndjson=nvim.desktop
+image/bmp=feh.desktop
+image/gif=imv-2.desktop;
 image/jpeg=feh.desktop
 image/png=feh.desktop
-image/gif=feh.desktop
-image/bmp=feh.desktop
-model/lst=/usr/share/applications/glslViewer.desktop
-model/ply=/usr/share/applications/glslViewer.desktop
-model/obj=/usr/share/applications/glslViewer.desktop
-model/gltf-binary=/usr/share/applications/glslViewer.desktop
 model/gltf+json=/usr/share/applications/glslViewer.desktop
-
+model/gltf-binary=/usr/share/applications/glslViewer.desktop
+model/lst=/usr/share/applications/glslViewer.desktop
+model/obj=/usr/share/applications/glslViewer.desktop
+model/ply=/usr/share/applications/glslViewer.desktop
+text/plain=nvim.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
