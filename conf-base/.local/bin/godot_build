@@ -1,2 +1,0 @@
-#!/bin/sh
-scons platform=linuxbsd use_llvm=yes linker=mold use_static_cpp=no

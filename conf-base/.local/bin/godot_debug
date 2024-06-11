@@ -1,2 +1,0 @@
-#!/bin/sh
-$HOME/godot_engine/bin/godot.linuxbsd.editor.x86_64.llvm "$HOME/projects/godot_debug/godot_fold_bug/project.godot"
