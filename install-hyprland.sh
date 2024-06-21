@@ -1,7 +1,7 @@
 #!/bin/bash
 #(C) 2023 Joan Dot Saster, GPL v2.0 or later. No warranty.
 pacman_packages=(
-	hyprland wl-clipboard xdg-desktop-portal-hyprland
+	hyprland wl-clipboard xdg-desktop-portal-hyprland hyprlock hypridle
 	waybar grim slurp cliphist swayidle swappy
 )
 
