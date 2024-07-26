@@ -67,6 +67,8 @@ abbrevs=(
     "gp" "git push -u origin HEAD"
     "gc" "git commit -m '|cursor|'"
     "ghc" "gh repo create --remote=origin source . --private " # Create repo and set-url
+    "gch" "git clone --recurse-submodules https://github.com/|cursor|.git"
+    "gcs" "git clone --recurse-submodules git@github.com:|cursor|.git"
 )
 
 # Some might not make a lot of sense as alias but meh
