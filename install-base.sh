@@ -18,7 +18,7 @@ add_tty_login() {
 }
 
 install_pacman_pcks() {
-	# to watch timeshift and auto mkconf
+    # TODO: Separate into devtools, win manager stuff, gaming, etc
 	pacman_pcks=(python-pywal dunst otf-font-awesome ttf-roboto-mono-nerd ttf-hack-nerd noto-fonts-cjk inotify-tools yazi qt5ct zoxide syncthing 
         gammastep # redshift wayland
         tree-sitter tree-sitter-cli # neovim
@@ -28,6 +28,8 @@ install_pacman_pcks() {
         calc
         obsidian syncthing
         nwg-look # kde tool for cursor/icon setting
+
+        fd # file finder
     )
     gh config set git_protocol ssh
 	sudo pacman --noconfirm --needed -S "${pacman_pcks[@]}" || {
