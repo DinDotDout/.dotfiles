@@ -63,7 +63,7 @@ install_paru_and_aur_pcks() {
 	echo "Installing Paru pckgs!"
 	paru_packages=(neovim-remote stow starship noto-fonts-emoji
 		catppuccin-gtk-theme-macchiato catppuccin-cursors-mocha nodejs
-		protonup-qt timeshift zram-generator preload pywal rofi-calc redshift-wayland-git
+		protonup-qt timeshift zram-generator preload pywal rofi-calc
 		sddm-sugar-candy-git autofirma-bin vlc flatpak libreoffice-still pokemon-colorscripts-git
 		python-pywalfox colorz walogram fzf
         # pywal-16-colors
