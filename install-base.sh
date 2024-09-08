@@ -29,6 +29,7 @@ install_pacman_pcks() {
         obsidian syncthing
         nwg-look # kde tool for cursor/icon setting
 
+        python-pipx
         fd # file finder
     )
     gh config set git_protocol ssh
