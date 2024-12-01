@@ -20,6 +20,7 @@ add_tty_login() {
 install_pacman_pcks() {
     # TODO: Separate into devtools, win manager stuff, gaming, etc
 	pacman_pcks=(python-pywal dunst otf-font-awesome ttf-roboto-mono-nerd ttf-hack-nerd noto-fonts-cjk inotify-tools yazi qt5ct zoxide syncthing 
+        papis
         gammastep # redshift wayland
         tree-sitter tree-sitter-cli # neovim
         rofi-wayland # app launcher
@@ -33,6 +34,7 @@ install_pacman_pcks() {
         fd # file finder
     )
     gh config set git_protocol ssh
+    mkdir Documents/papers # For papis
 	sudo pacman --noconfirm --needed -S "${pacman_pcks[@]}" || {
 		echo 'Failed to install pacman packages.'
 		exit 1
